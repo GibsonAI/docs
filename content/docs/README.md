@@ -4,7 +4,7 @@ updatedOn: '2025-05-30T16:54:40.442Z'
 
 # Docs
 
-Welcome to Neon docs! This folder contains the source code of the [Neon docs](/docs/).
+Welcome to GibsonAI docs! This folder contains the source code of the [GibsonAI docs](https://docs.gibsonai.com/).
 
 ## Basic information
 
