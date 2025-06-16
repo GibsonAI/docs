@@ -1,0 +1,83 @@
+- section: Get Started
+  items:
+    - title: What is GibsonAI?
+      slug: get-started-with-gibsonai/what-gibsonai
+      icon: info
+
+    - title: Quickstarts
+      icon: play
+      items:
+        - title: Getting started with GibsonAI
+          slug: get-started-with-gibsonai/signing-up
+          icon: play
+
+        - title: Connect GibsonAI to your stack
+          slug: get-started-with-gibsonai/connect-gibsonai
+          icon: connect
+
+- section: Platform
+  items:
+    - title: Use cases
+      slug: use-cases/overview
+      icon: use-case
+
+    - title: Architecture
+      icon: architecture
+      items:
+        - title: Overview
+          slug: introduction/architecture-overview
+          icon: info
+
+        - title: Conversation States
+          slug: introduction/conversation-state
+          icon: chat
+
+    - title: Features
+      slug: guides/gibsonai-features
+      icon: features
+
+    - title: Pricing
+      slug: introduction/about-pricing
+      icon: billing
+
+- section: Dev tools
+  items:
+    - title: CLI Reference
+      icon: cli
+      items:
+        - title: Quickstart
+          slug: reference/cli-quickstart
+          icon: play
+
+        - title: Key Concepts and Commands
+          slug: reference/cli-commands
+          icon: info
+
+        - title: Usage Examples
+          slug: reference/cli-examples
+          icon: workflows
+
+    - title: MCP Server
+      icon: ai-agent
+      items:
+        - title: Overview
+          slug: ai/mcp-server
+          icon: info
+
+        - title: Connect MCP Clients
+          slug: ai/connect-mcp-clients-to-gibsonai
+          icon: connect
+
+    - title: Example repos
+      slug: https://github.com/GibsonAI/awesome-gibson
+      icon: book
+
+    - title: Next.js App Template
+      slug: https://github.com/GibsonAI/next-app
+      icon: template
+
+- section: Authentication & Access
+  items:
+    - title: Signup & Sign-In
+      slug: guides/gibsonai-auth
+      icon: auth

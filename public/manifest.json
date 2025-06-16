@@ -1,0 +1,21 @@
+{
+  "name": "GibsonAI",
+  "short_name": "GibsonAI",
+  "icons": [
+    {
+      "src": "/favicon/favicon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
