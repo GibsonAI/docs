@@ -554,24 +554,24 @@
 #               slug: ai/ai-vector-search-optimization
 #             - title: Scale with Neon
 #               slug: ai/ai-scale-with-neon
-# - section: Dev tools
-#   items:
-#     - title: CLI Reference
-#       icon: cli
-#       slug: reference/neon-cli
-#       items:
-#         - title: Quickstart
-#           slug: reference/cli-quickstart
-#         - title: Install and connect
-#           slug: reference/cli-install
+- section: Dev tools
+  items:
+    - title: CLI Reference
+      icon: cli
+      slug: reference/gibsonai-cli
+      items:
+        - title: Quickstart
+          slug: reference/cli-quickstart
+        - title: Key Concepts and Commands
+          slug: reference/cli-commands
 #         - title: auth
 #           slug: reference/cli-auth
 #         - title: me
 #           slug: reference/cli-me
 #         - title: orgs
 #           slug: reference/cli-orgs
-#         - title: projects
-#           slug: reference/cli-projects
+        - title: Usage Examples
+          slug: reference/cli-examples
 #         - title: ip-allow
 #           slug: reference/cli-ip-allow
 #         - title: vpc

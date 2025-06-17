@@ -1,55 +1,34 @@
 ---
-title: Neon CLI Quickstart
-subtitle: Get set up with the Neon CLI in just a few steps
+title: GibsonAI CLI Quickstart
+subtitle: Get started with the GibsonAI CLI in just a few steps
 enableTableOfContents: true
-updatedOn: '2025-05-30T16:54:40.492Z'
+updatedOn: '2025-06-16T16:54:40.492Z'
 ---
 
-The Neon CLI is a command-line interface that lets you manage Neon directly from the terminal. This guide will help you quickly set up and start using the Neon CLI.
+The GibsonAI CLI is a command-line interface that lets you manage GibsonAI directly from the terminal. This guide will help you quickly set up and start using the GibsonAI CLI.
 
 <Steps>
 
 ## Install the CLI
 
-Choose your platform and install the Neon CLI:
+Install the GibsonAI CLI:
 
-<Tabs labels={["macOS", "Windows", "Linux"]}>
-
-<TabItem>
-
-**Install with Homebrew**
-
-```bash
-brew install neonctl
-```
-
-**Install via npm**
-
-```shell
-npm i -g neonctl
-```
-
-**Install with bun**
-
-```bash
-bun install -g neonctl
-```
-
-</TabItem>
+<Tabs labels={["macOS"]}>
 
 <TabItem>
 
-**Install via npm**
-
-```shell
-npm i -g neonctl
-```
-
-**Install with bun**
+**Install with [UV](https://docs.astral.sh/uv/) (recommended)**
 
 ```bash
-bun install -g neonctl
+uv tool install gibson-cli@latest
 ```
+
+**Install with [pip](https://pip.pypa.io/en/stable/#)**
+
+```shell
+pip install gibson-cli --upgrade
+```
+
 
 </TabItem>
 
@@ -74,164 +53,76 @@ bun install -g neonctl
 Verify the installation by checking the CLI version:
 
 ```bash
-neon --version
+gibson --version
 ```
 
-For the latest version, refer to the [Neon CLI GitHub repository](https://github.com/neondatabase/neonctl)
+For the latest version, refer to the [Gibson CLI GitHub repository](https://github.com/GibsonAI/cli)
 
-## Authenticate
+## Run Gibson
 
-Authenticate with your Neon account using one of these methods:
-
-**Web Authentication (recommended)**
-
-Run the command below to authenticate through your browser:
+Just execute `gibson`. This will set things up for you and open a browser window where you can authorize the CLI to access your GibsonAI account.
 
 ```bash
-neon auth
+gibson
 ```
 
-This will open a browser window where you can authorize the CLI to access your Neon account.
-
-**API Key Authentication**
-
-Alternatively, you can use a personal Neon API key. You can create one in the Neon Console. See [Create a personal API key](/docs/manage/api-keys#create-a-personal-api-key).
-
-```bash
-neon projects list --api-key <your-api-key>
-```
-
-To avoid entering your API key with each command, you can set it as an environment variable:
-
-```bash
-export NEON_API_KEY=<your-api-key>
-```
-
-For more about authenticating, see [Neon CLI commands — auth](/docs/reference/cli-auth).
-
-## Set up your context file
-
-Context files allow you to use CLI commands without specifying your project ID or organization ID with each command.
-
-To set the context for your Neon project:
-
-```bash
-neon set-context --project-id <your-project-id>
-```
-
-To set the context for your both your Neon organization and a Neon project:
-
-```bash
-neon set-context --org-id <your-org-id> --project-id <your-project-id>
-```
-
-<Admonition type="info">
-You can find your organization ID in the Neon Console by selecting your organization and navigating to **Settings**. You can find your Neon project ID by opening your project in the Neon Console and navigating to **Settings** > **General**.
+<Admonition type="note">
+On some browsers like Safari, you may need to find a blocked popup and allow it after logging in.
 </Admonition>
 
-The `set-context` command creates a `.neon` file in your current directory with your project context.
+**Authentication**
+
+Alternatively, you can authenticate with GibsonAI by running:
 
 ```bash
-$ cat .neon
-
-{
-  "projectId": "broad-surf-52155946",
-  "orgId": "org-solid-base-83603457"
-}%
+gibson auth login
 ```
 
-You can also create named context files for different organization and project contexts:
+## Configure Your API Key
+
+After creating your project at [app.gibsonai.com](https://app.gibsonai.com), you'll receive an API key via email. Configure it:
 
 ```bash
-neon set-context --org-id <your-org-id> --project-id <your-project-id> --context-file dev_project
+gibson conf api::key [API key]
 ```
 
-To switch contexts, add the `--context-file` option to any command, specifying your context file:
+## Import Your Datastore or API Project
+
+Depending on your source:
 
 ```bash
-neon branches list --context-file Documents/dev_project
+gibson import mysql
 ```
 
-For more about the `set-context` command, see [Neon CLI commands — set-context](/docs/reference/cli-set-context).
-
-## Enable shell completion
-
-Next, you can set up autocompletion to make using the CLI faster:
-
-<Tabs labels={["Bash", "Zsh"]}>
-
-<TabItem>
+or
 
 ```bash
-neon completion >> ~/.bashrc
-source ~/.bashrc
+gibson import api
 ```
 
-</TabItem>
+This will populate GibsonAI's stored memory with your schema and generate base code.
 
-<TabItem>
+---
+
+## Enable Dev Mode
+
+Enable Dev Mode so GibsonAI can write code while you execute commands:
 
 ```bash
-neon completion >> ~/.zshrc
-source ~/.zshrc
+gibson dev on
 ```
 
-</TabItem>
+---
 
-</Tabs>
+## Build and Customize
 
-Now you can press **Tab** to complete Neon CLI commands and options. For further details, see [Neon CLI commands — completion](/docs/reference/cli-completion).
-
-## Common operations
-
-Here are some common operations you can perform with the Neon CLI:
-
-### List your projects
+Start modifying or building models using natural language:
 
 ```bash
-neon projects list
+gibson modify user I want to add a nickname column
+gibson code models
+gibson merge
 ```
 
-If you want to list projects in your organization, don't forget to set your organization context or specify `--org-id <your-org-id>`. Otherwise, you'll list the projects in your personal Neon account.
-
-For more about the `projects` command, see [Neon CLI commands — projects](/docs/reference/cli-projects).
-
-### Create a branch
-
-```bash
-neon branches create --name <branch-name>
-```
-
-Set your project context or specify `--project-id <your-project-id>` if you have more than one Neon project.
-
-For more about the `branches` command, see [Neon CLI commands — branches](/docs/reference/cli-branches).
-
-### Get a connection string
-
-This will give you the connection string for the default branch in your project:
-
-```bash
-neon connection-string
-```
-
-For a specific branch, specify the branch name:
-
-```bash
-neon connection-string <branch-name>
-```
-
-There's lots more you can do with the `connection-string` command. See [Neon CLI commands — connection-string](/docs/reference/cli-connection-string).
-
-## Next steps
-
-Now that you're set up with the Neon CLI, you can:
-
-- Create more Neon projects with `neon projects create`
-- Manage your branches with various `neon branches` commands such as `reset`, `restore`, `rename`, `schema-diff`, and more
-- Create and manage databases with `neon databases` commands
-- Create and manage roles with `neon roles` commands
-- View the full set of Neon CLI commands available to you with `neon --help`
-
-For more details on all available commands, see the [CLI Reference](/docs/reference/neon-cli).
-
+You're now ready to build, test, and evolve your application with AI assistance!
 </Steps>

@@ -63,7 +63,7 @@ Now it's time to deploy your schema to a real database.
 3. If you’re on the Free plan, only Production is available by default
 4. Gibson will provision a real serverless database, provides connection details and generates ready to use Data API for CRUD operations.
 
-> Currently, GibsonAI supports MySQL database deployment. You can also connect to your existing database to import schemas from any database of your choice.
+> Currently, GibsonAI supports MySQL database deployment. You can also connect to your existing MySQL database to import existing schemas.
 > 
 
 ---
