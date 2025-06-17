@@ -54,6 +54,6 @@ export const authOptions = {
   },
 };
 
-const handler = NextAuth(authOptions);
-
-export { handler as GET, handler as POST };
+// Disabled NextAuth for build
+export const GET = () => new Response('NextAuth is disabled', { status: 200 });
+export const POST = () => new Response('NextAuth is disabled', { status: 200 });

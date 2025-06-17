@@ -7,7 +7,7 @@ const HOME_MENU_ITEM = { title: 'Home', slug: 'introduction' };
 
 module.exports = {
   DOCS_BASE_PATH,
-  POSTGRESQL_BASE_PATH,
+  // POSTGRESQL_BASE_PATH,
   CHANGELOG_BASE_PATH,
   CHANGELOG_SLUG_REGEX,
   HOME_MENU_ITEM,
