@@ -28,11 +28,11 @@ One prompt to build a database schema with GibsonAI.
 
 <TechCards withToggler>
 
+<a href="https://github.com/GibsonAI/next-app" title="Next.js" description="Connect a Next.js application to GibsonAI" icon="next-js"></a>
+
 <a href="" title="React" description="Build powerful and interactive user interfaces with React using GibsonAI as your database" icon="react"></a>
 
 <a href="" title="Node.js" description="Connect any Note JS application to GibsonAI" icon="node-js"></a>
-
-<a href="" title="Next.js" description="Connect a Next.js application to GibsonAI" icon="next-js"></a>
 
 <a href="" title="Vue" description="Connect a Vue.js application to GibsonAI" icon="vue"></a>
 

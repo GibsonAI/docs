@@ -443,9 +443,9 @@
 #     - title: Status
 #       slug: introduction/status
 #       icon: status
-#     - title: Plans and billing
-#       slug: introduction/about-billing
-#       icon: billing
+    - title: Pricing
+      slug: introduction/about-pricing
+      icon: billing
 #       items:
 #         - title: Plans
 #           slug: introduction/plans
@@ -631,9 +631,9 @@
 #     - title: Find your template
 #       slug: /templates
 #       icon: template
-#     - title: Examples repo
-#       slug: https://github.com/neondatabase/examples
-#       icon: search
+    - title: Example repos
+      slug: https://github.com/GibsonAI
+      icon: search
 # - section: Frameworks & integrations
 #   items:
 #     - title: Frameworks
@@ -889,12 +889,11 @@
 #               slug: guides/auth-clerk
 #             - title: Okta
 #               slug: guides/auth-okta
-# - section: Auth & access
-#   items:
-#     - title: Neon Auth
-#       icon: auth
-#       tag: beta
-#       slug: guides/neon-auth
+- section: Authentication & Access
+  items:
+    - title: Signup & Sign-In
+      icon: auth
+      slug: guides/gibsonai-auth
 #       items:
 #         - section: Get started
 #           items:
