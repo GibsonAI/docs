@@ -7,7 +7,7 @@ updatedOn: '2025-06-17T16:54:40.483Z'
 
 GibsonAI offers flexible pricing plans to accommodate different project sizes and needs.
 
-Neon offers three plans:
+GibsonAI offers three plans:
 
 - [Free Plan](#free-plan)
 - [Starter Plan](#starter-plan)
