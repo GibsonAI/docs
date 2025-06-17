@@ -209,24 +209,24 @@ const fetchAllWpPosts = async (first, after) => {
 
 const getAllWpPosts = cache(async () => {
   let allPosts = [];
-  // let afterCursor = null;
+  let afterCursor = null;
 
-  // // Limit posts fetch for development & previews
-  // const isProduction = process.env.VERCEL_ENV === 'production';
-  // const first = isProduction ? BLOG_POSTS_PER_PAGE : BLOG_POSTS_FOR_PREVIEW;
+  // Limit posts fetch for development & previews
+  const isProduction = process.env.VERCEL_ENV === 'production';
+  const first = isProduction ? BLOG_POSTS_PER_PAGE : BLOG_POSTS_FOR_PREVIEW;
 
-  // while (true) {
-  //   try {
-  //     const { nodes: posts, pageInfo } = await fetchAllWpPosts(first, afterCursor);
+  while (true) {
+    try {
+      const { nodes: posts, pageInfo } = await fetchAllWpPosts(first, afterCursor);
 
-  //     allPosts = allPosts.concat(posts);
-  //     if (!isProduction || !pageInfo.hasNextPage) break;
-  //     afterCursor = pageInfo.endCursor;
-  //   } catch (error) {
-  //     console.error('Error fetching posts:', error);
-  //     break;
-  //   }
-  // }
+      allPosts = allPosts.concat(posts);
+      if (!isProduction || !pageInfo.hasNextPage) break;
+      afterCursor = pageInfo.endCursor;
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      break;
+    }
+  }
 
   return allPosts;
 });
