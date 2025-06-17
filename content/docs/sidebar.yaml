@@ -572,6 +572,14 @@
 #           slug: reference/cli-orgs
         - title: Usage Examples
           slug: reference/cli-examples
+    - title: MCP Server
+      slug: ai/mcp-server
+      icon: ai-agent
+      items:
+        - title: Overview
+          slug: ai/mcp-server
+        - title: Connect MCP Clients
+          slug: ai/connect-mcp-clients-to-gibsonai
 #         - title: ip-allow
 #           slug: reference/cli-ip-allow
 #         - title: vpc

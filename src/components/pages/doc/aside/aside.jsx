@@ -33,9 +33,9 @@ const Aside = ({
       {enableTableOfContents && <TableOfContents items={tableOfContents} isTemplate={isTemplate} />}
       {/* {isDocsIndex && <ChatOptions isSidebar />} */}
       {/* {isChangelog && <ChangelogForm isSidebar />} */}
-      {/* {!isChangelog && !isTemplate && (
+      {!isChangelog && !isTemplate && (
         <Actions githubPath={githubPath} withBorder={enableTableOfContents} />
-      )} */}
+      )}
     </div>
   </div>
 );
