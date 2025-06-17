@@ -17,18 +17,18 @@ const SUSPEND_TIMEOUT_SECONDS = 120; // 2 minutes
 const PROJECT_COOKIE_MAX_AGE_SECONDS = 3600; // 1 hour
 const PROJECT_COOKIE_NAME = 'neon-project';
 
-const neonApiClient = createApiClient({
-  apiKey: process.env.DEPLOY_POSTGRES_NEON_API_KEY,
-});
+// const neonApiClient = createApiClient({
+//   apiKey: process.env.DEPLOY_POSTGRES_NEON_API_KEY,
+// });
 
-const ratelimit = new Ratelimit({
-  redis: new Redis({
-    url: process.env.DEPLOY_POSTGRES_UPSTASH_REDIS_REST_URL,
-    token: process.env.DEPLOY_POSTGRES_UPSTASH_REDIS_REST_TOKEN,
-  }),
-  limiter: Ratelimit.slidingWindow(RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW),
-  analytics: true,
-});
+// const ratelimit = new Ratelimit({
+//   redis: new Redis({
+//     url: process.env.DEPLOY_POSTGRES_UPSTASH_REDIS_REST_URL,
+//     token: process.env.DEPLOY_POSTGRES_UPSTASH_REDIS_REST_TOKEN,
+//   }),
+//   limiter: Ratelimit.slidingWindow(RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW),
+//   analytics: true,
+// });
 
 // Disabled Upstash Redis and ticket creation for build
 export async function POST(request) {
