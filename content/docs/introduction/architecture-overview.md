@@ -1,30 +1,27 @@
 ---
-title: Neon architecture
-redirectFrom:
-  - /docs/storage-engine/architecture-overview
-  - /docs/conceptual-guides/architecture-overview
-updatedOn: '2024-11-21T16:16:13.439Z'
+title: GibsonAI Architecture
+subtitle: Understand infrastructure behind GibsonAI
+updatedOn: '2025-06-17T16:16:13.439Z'
 ---
 
-Neon architecture is based on the separation of compute and storage and is orchestrated by the Neon Control Plane, which manages cloud resources across both storage and compute.
+GibsonAI is built on a modern, scalable infrastructure designed to support dynamic database engineering
 
-A Neon compute runs Postgres, and storage is a multi-tenant key-value store for Postgres pages that is custom-built for the cloud.
+## Cloud-Native Architecture
 
-![Neon architecture diagram](/docs/introduction/neon_architecture_5.jpg)
+GibsonAI runs on a robust cloud platform to ensure high availability and security. 
 
-Neon storage consists of three main components: Safekeepers, Pageservers, and cloud object storage.
+## Modular Microservices
 
-Safekeepers are responsible for durability of recent updates.
-Postgres streams [Write-Ahead Log (WAL)](/docs/reference/glossary#wal) to the Safekeepers, and the Safekeepers store the WAL durably until it has been processed by the Pageservers and uploaded to a cloud object store.
+Each component (ERD generation, schema management, API deployment) is handled by specialized microservices. This makes everything faster and easier to manage or improve.
 
-Pageservers are responsible for serving read requests. To do that, Pageservers process the incoming WAL stream into a custom storage format that makes all [page](/docs/reference/glossary#page) versions easily accessible. Pageservers also upload data to cloud object storage, and download the data on demand.
+## Containerization
 
-Safekeepers can be thought of as an ultra-reliable write buffer that holds the latest data until it is processed and uploaded to cloud storage. Safekeepers implement the Paxos protocol for reliability. Pageservers also function as a read cache for cloud storage, providing fast random access to data pages.
+Utilizes Docker and Kubernetes for easy scaling and reliable deployments.
 
-## Durability
+## Data Security
 
-Durability is at the core of Neon's architecture. As described earlier, incoming WAL data is initially stored across multiple availability zones in a [Paxos](<https://en.wikipedia.org/wiki/Paxos_(computer_science)>) cluster before being uploaded to a cloud object store, such as [Amazon S3](https://aws.amazon.com/s3/) (99.999999999% durability), both in raw WAL and materialized form. Additional copies are maintained across Pageservers to enhance the read performance of frequently accessed data. Consequently, there are always multiple copies of your data in Neon, ensuring durability.
+GibsonAI takes your data seriously. It uses strong encryption to make sure no one can read your data without permission. It also controls who can access what, so only the right people can see or change things.
 
-## Archive storage
+## Continuous Monitoring
 
-Archive storage in Neon, which enables [branch archiving](/docs/guides/branch-archiving) on the Free Plan, optimizes storage resources by offloading data that's not being used. As described above, Neon’s architecture includes Safekeepers, Pageservers, and cloud object storage. In this setup, the Pageservers are responsible for processing and uploading data to cloud object storage as soon as it's written. When a branch is archived, it does not involve moving data; instead, the branch's data is simply evicted from the Pageserver, freeing up Pageserver storage. This approach ensures that while archived data is readily available on demand in cost-efficient object storage, it's no longer taking up space in the more performant storage used by Neon's Pageservers.
+Real-time monitoring and logging using smart monitoring tools. These tools track how well everything is working and alert the team if something goes wrong. This helps fix problems fast and keep the service running smoothly.

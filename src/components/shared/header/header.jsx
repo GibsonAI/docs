@@ -81,7 +81,7 @@ const Header = ({
               priority
               isHeader
             />
-            <Navigation isDarkTheme={isDarkTheme} />
+            {/* <Navigation isDarkTheme={isDarkTheme} /> */}
           </div>
           <Sidebar isDarkTheme={isDarkTheme} isClient={isClient} />
         </Container>

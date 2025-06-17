@@ -19,7 +19,7 @@ const styles = {
     xxs: 'h-8 px-4 text-sm tracking-extra-tight',
   },
   theme: {
-    primary: 'bg-primary-1 text-black hover:bg-[#00e5bf]',
+    primary: 'bg-[#c0f910] text-black hover:bg-[#c0f910]',
     secondary: 'bg-black text-white hover:bg-[#292929] disabled:bg-[#292929]',
     tertiary: 'bg-transparent text-white border border-white hover:border-primary-2',
     quaternary: 'bg-white text-black border border-black hover:border-primary-2',
@@ -33,7 +33,7 @@ const styles = {
     'gray-dark-outline-black':
       'text-black border border-gray-new-90 bg-gray-new-98 hover:border-gray-new-70 dark:text-white dark:bg-gray-new-10 dark:border-[#37393D] dark:hover:border-white',
     'green-outline':
-      'bg-[#0D0D0D] text-white border transition-shadow duration-500 border-green-45 hover:shadow-[0px_8px_30px_0px_rgba(0,229,153,.16)]',
+      'bg-[#c0f910] text-white border transition-shadow duration-500 border-green-45 hover:shadow-[0px_8px_30px_0px_rgba(0,229,153,.16)]',
     'green-underlined':
       'underline decoration-green-45/40 hover:decoration-green-45/100 text-green-45 transition-colors duration-500',
     blue: 'bg-blue-80 text-black hover:bg-[#C6EAF1]',

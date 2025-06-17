@@ -209,11 +209,11 @@
     #       items:
     #         - title: Sample data
     #           slug: import/import-sample-data
-# - section: Platform
-#   items:
-#     - title: Architecture
-#       icon: architecture
-#       slug: introduction/architecture-overview
+- section: Platform
+  items:
+    - title: Architecture
+      icon: architecture
+      slug: introduction/architecture-overview
 #       items:
 #         - title: Overview
 #           slug: introduction/architecture-overview
@@ -223,9 +223,9 @@
 #           slug: introduction/compute-lifecycle
 #         - title: High availability
 #           slug: introduction/high-availability
-#     - title: Features
-#       slug: guides/neon-features
-#       icon: features
+    - title: Features
+      slug: guides/gibsonai-features
+      icon: features
 #       items:
 #         - title: Serverless
 #           slug: introduction/serverless

@@ -55,7 +55,6 @@ const Hero = ({ title, text, reset }) => {
       >
         <div className="col-start-2 col-end-6 flex flex-col 2xl:col-start-1 lg:col-end-7 md:col-span-full">
           <h1 className="font-title text-[58px] font-medium leading-none xl:text-5xl xl:leading-none lg:text-4xl">
-            Ooops!
             <br />
             {title}
           </h1>
@@ -65,7 +64,7 @@ const Hero = ({ title, text, reset }) => {
           </div>
         </div>
 
-        <div className="col-start-6 col-end-12 2xl:col-end-13 lg:col-start-7 md:col-span-full">
+        {/* <div className="col-start-6 col-end-12 2xl:col-end-13 lg:col-start-7 md:col-span-full">
           <Image
             className="w-full md:mx-auto md:max-w-xl"
             width={860}
@@ -75,7 +74,7 @@ const Hero = ({ title, text, reset }) => {
             quality={75}
             priority
           />
-        </div>
+        </div> */}
       </Container>
     </section>
   );

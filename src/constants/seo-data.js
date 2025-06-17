@@ -200,14 +200,14 @@ export default {
     };
   },
   '404-ticket': {
-    title: 'Ticket Not Found - Neon',
+    title: 'Ticket Not Found - GibsonAI',
     imagePath: '/images/social-previews/no-name-ticket.jpg',
   },
   error: {
-    title: 'Page Is Broken — Neon',
+    title: 'Page Is Broken — GibsonAI',
   },
   404: {
-    title: 'Page Not Found — Neon',
+    title: 'Page Not Found — GibsonAI',
   },
 };
 

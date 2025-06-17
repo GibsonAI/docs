@@ -107,7 +107,7 @@ const icons = {
 const Icon = ({ title, className = null }) => {
   const IconTag = icons[title];
 
-  return <IconTag className={className} />;
+  return <IconTag className={className} style={{ color: '#c0f910' }} />;
 };
 
 Icon.propTypes = {
