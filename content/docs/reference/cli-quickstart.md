@@ -32,22 +32,6 @@ pip install gibson-cli --upgrade
 
 </TabItem>
 
-<TabItem>
-
-**Install via npm**
-
-```shell
-npm i -g neonctl
-```
-
-**Install with bun**
-
-```bash
-bun install -g neonctl
-```
-
-</TabItem>
-
 </Tabs>
 
 Verify the installation by checking the CLI version:

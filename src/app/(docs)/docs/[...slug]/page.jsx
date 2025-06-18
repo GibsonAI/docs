@@ -61,7 +61,7 @@ export async function generateMetadata({ params }) {
 
   return getMetadata({
     title: `${title} - GibsonAI Docs`,
-    description: isChangelog ? 'The latest product updates from Neon' : post.excerpt,
+    description: isChangelog ? 'The latest product updates from GibsonAI' : post.excerpt,
     imagePath: `${VERCEL_URL}/docs/og?title=${encodedTitle}&category=${encodedCategory}`,
     pathname: `${LINKS.docs}/${currentSlug}`,
     rssPathname: isChangelog ? `${LINKS.changelog}/rss.xml` : null,
@@ -114,7 +114,7 @@ const DocPost = async ({ params }) => {
     headline: data.title,
     author: {
       '@type': 'Organization',
-      name: 'Neon',
+      name: 'GibsonAI',
     },
   };
 

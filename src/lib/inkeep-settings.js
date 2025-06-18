@@ -5,49 +5,14 @@ const baseSettings = {
   integrationId: process.env.INKEEP_INTEGRATION_ID,
   organizationId: process.env.INKEEP_ORGANIZATION_ID,
   primaryBrandColor: '#00E599',
-  organizationDisplayName: 'Neon',
+  organizationDisplayName: 'GibsonAI',
   customIcons: {
     close: { custom: closeIcon },
   },
   customCardSettings: [
     {
-      filters: {
-        AND: [
-          {
-            UrlMatch: {
-              ruleType: 'PartialUrl',
-              partialUrl: 'https://neon.com/docs',
-            },
-          },
-          {
-            NOT: {
-              UrlMatch: {
-                ruleType: 'PartialUrl',
-                partialUrl: 'https://neon.com/docs/changelog',
-              },
-            },
-          },
-        ],
-      },
+      filters: {},
       searchTabLabel: 'GibsonAI Docs',
-    },
-    {
-      filters: {
-        UrlMatch: {
-          ruleType: 'PartialUrl',
-          partialUrl: 'https://neon.com/postgresql',
-        },
-      },
-      searchTabLabel: 'PostgreSQL Tutorial',
-    },
-    {
-      filters: {
-        UrlMatch: {
-          ruleType: 'PartialUrl',
-          partialUrl: 'https://neon.com/docs/changelog',
-        },
-      },
-      searchTabLabel: 'Changelog',
     },
   ],
 };
@@ -71,7 +36,7 @@ const aiChatSettings = {
   userAvatarSrcUrl: '/inkeep/images/user.svg',
   userAvatarDarkSrcUrl: '/inkeep/images/user-dark.svg',
   isChatSharingEnabled: true,
-  shareChatUrlBasePath: 'https://neon.com/ai-chat',
+  shareChatUrlBasePath: 'https://gibsonai.com',
   getHelpCallToActions: [
     {
       type: 'OPEN_LINK',
@@ -82,7 +47,7 @@ const aiChatSettings = {
     {
       type: 'OPEN_LINK',
       icon: { builtIn: 'IoChatbubblesOutline' },
-      name: 'Neon Support',
+      name: 'GibsonAI Support',
       url: 'https://console.neon.com/app/projects?modal=support',
     },
   ],

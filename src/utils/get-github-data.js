@@ -1,14 +1,14 @@
-const API_URL = 'https://api.github.com/repos/neondatabase/neon';
+const API_URL = 'https://api.github.com/repos/GibsonAI/docs';
 
 const getGithubStars = async () => {
-  if (process.env.NODE_ENV === 'production') {
-    const response = await fetch(API_URL, { next: { revalidate: 60 * 60 * 12 } });
-    const json = await response.json();
-    if (response.status >= 400) {
-      throw new Error('Error fetching GitHub stars');
-    }
-    return json.stargazers_count;
-  }
+  // if (process.env.NODE_ENV === 'production') {
+  //   const response = await fetch(API_URL, { next: { revalidate: 60 * 60 * 12 } });
+  //   const json = await response.json();
+  //   if (response.status >= 400) {
+  //     throw new Error('Error fetching GitHub stars');
+  //   }
+  //   return json.stargazers_count;
+  // }
   return 16000;
 };
 
