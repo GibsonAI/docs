@@ -28,8 +28,6 @@
     "@headlessui/tailwindcss": "^0.2.0",
     "@hookform/resolvers": "^3.3.4",
     "@inkeep/uikit": "^0.3.8",
-    "@neondatabase/api-client": "^1.12.0",
-    "@neondatabase/serverless": "^0.10.4",
     "@next-auth/prisma-adapter": "^1.0.7",
     "@next/bundle-analyzer": "^14.2.2",
     "@octokit/core": "^6.1.2",

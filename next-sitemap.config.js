@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_DEFAULT_SITE_URL || 'https://neon.com',
+  siteUrl: process.env.NEXT_PUBLIC_DEFAULT_SITE_URL || 'https://docs.gibsonai.com',
   exclude: [
     '/blog/wp-draft-post-preview-page',
     '/blog/rss.xml',
