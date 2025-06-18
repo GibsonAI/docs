@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import CookieConsent from 'components/shared/cookie-consent';
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
-import Topbar from 'components/shared/topbar';
 
 const Layout = ({
   className = null,
@@ -23,7 +22,7 @@ const Layout = ({
   isClient = false,
 }) => (
   <>
-    {!isClient && <Topbar isDarkTheme={headerTheme === 'dark'} />}
+    {!isClient}
     {/* 36px is the height of the topbar */}
     <div className="relative flex min-h-[calc(100vh-36px)] flex-col pt-safe">
       <Header
