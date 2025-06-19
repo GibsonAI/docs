@@ -22,7 +22,7 @@ const checkSlugInActiveMenu = (currentSlug, activeMenuList, items) => {
   const isSlugInActiveMenu = (items) =>
     items.some(
       (item) =>
-        (item.title === activeMenu.title &&
+        (item.slug === activeMenu.slug &&
           item.items?.some((subItem) => subItem.slug === currentSlug)) ||
         (item.items && isSlugInActiveMenu(item.items))
     );
@@ -74,7 +74,6 @@ const Sidebar = ({ className = null, sidebar, slug, basePath, customType, docPag
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlug]);
 
-  const [menuHeight, setMenuHeight] = useState(1000);
   const menuWrapperRef = useRef(null);
 
   return (
@@ -107,13 +106,12 @@ const Sidebar = ({ className = null, sidebar, slug, basePath, customType, docPag
               className="no-scrollbars z-10 h-[calc(100vh-166px)] overflow-y-scroll py-8"
               ref={menuWrapperRef}
             >
-              <div className="relative w-full overflow-hidden" style={{ height: menuHeight }}>
+              <div className="relative w-full">
                 <Menu
                   depth={0}
                   basePath={basePath}
                   slug={slug}
                   items={sidebar}
-                  setMenuHeight={setMenuHeight}
                   menuWrapperRef={menuWrapperRef}
                   activeMenuList={activeMenuList}
                   setActiveMenuList={setActiveMenuList}
