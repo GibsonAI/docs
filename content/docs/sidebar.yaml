@@ -1,21 +1,22 @@
-- section: noname
+- section: Get Started
   items:
     - title: What is GibsonAI?
       icon: why-neon
       slug: get-started-with-gibsonai/what-gibsonai
 
-    - title: Getting Started
+    - title: Quickstarts
       icon: get-started
       slug: get-started-with-gibsonai/signing-up
       items:
-        - section: Tutorial
-          items:
-            - title: 1 - Playing with GibsonAI
-              slug: get-started-with-gibsonai/signing-up
-            - title: 2 - Connect GibsonAI to your stack
-              slug: get-started-with-gibsonai/connect-gibsonai
+          - title: 1 - Playing with GibsonAI
+            slug: get-started-with-gibsonai/signing-up
+          - title: 2 - Connect GibsonAI to your stack
+            slug: get-started-with-gibsonai/connect-gibsonai
 - section: Platform
   items:
+    - title: Use cases
+      slug: use-cases/overview
+      icon: use-case
     - title: Architecture
       icon: architecture
       slug: introduction/architecture-overview
