@@ -30,7 +30,7 @@ export default async function handler(req) {
           backgroundColor: '#080808',
         }}
       >
-        <img width="100%" height="100%" src={colorSchemeMap[color]} alt="Ticket layout" />
+        {/* <img width="100%" height="100%" src={colorSchemeMap[color]} alt="Ticket layout" /> */}
         <div
           style={{
             position: 'absolute',
