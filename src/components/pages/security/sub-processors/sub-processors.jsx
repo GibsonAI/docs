@@ -14,13 +14,8 @@ const SubProcessors = () => (
             Sub-Processors
           </h2>
           <div className="text-with-links mt-4 flex flex-col gap-2 text-pretty leading-snug tracking-extra-tight text-gray-new-70 lg:text-[15px] sm:text-sm sm:font-light">
+            <p></p>
             <p>
-              Neon engages with carefully selected third-party sub-processors that assist in service
-              delivery.
-            </p>
-            <p>
-              All sub-processors are reviewed annually and must comply with contractual security and
-              privacy requirements. A list of our third-party sub-processors is available on our{' '}
               <a href={LINKS.subprocessors}>website</a>.
             </p>
           </div>

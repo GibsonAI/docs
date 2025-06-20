@@ -28,10 +28,7 @@ export const viewport = {
 const RootLayout = ({ children }) => (
   <html lang="en" className={`${inter.variable} ${esbuild.variable} dark`}>
     <head>
-      {process.env.NODE_ENV === 'production' && (
-        <Script strategy="afterInteractive" src="https://neonapi.io/cb.js" />
-      )}
-      <link rel="preconnect" href="https://console.neon.tech" />
+      <link rel="preconnect" href="https://app.gibsonai.com" />
     </head>
     <body>
       <SessionProvider>

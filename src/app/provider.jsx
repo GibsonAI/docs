@@ -5,17 +5,7 @@ import { ThemeProvider as PreferredProvider } from 'next-themes';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
-const whiteThemePages = [
-  '/careers',
-  '/thank-you',
-  '/privacy-policy',
-  '/terms-of-service',
-  '/dpa',
-  '/subprocessors',
-  '/privacy-guide',
-  '/cookie-policy',
-  '/business-info',
-];
+const whiteThemePages = ['/careers'];
 
 const themesSupportPages = ['/docs'];
 
@@ -32,7 +22,7 @@ const ThemeProvider = ({ children }) => {
       // If themes are supported, default to dark, else force theme
       forcedTheme={hasThemesSupport ? undefined : forcedTheme}
       defaultTheme="dark"
-      storageKey="neon-theme"
+      storageKey="gibsonai-theme"
       disableTransitionOnChange
     >
       {children}
