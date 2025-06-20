@@ -41,7 +41,8 @@ const Footer = ({ hasThemesSupport = false, theme = null }) => {
           </div>
           <div className="flex flex-col gap-x-1 gap-y-3 text-[13px] leading-none tracking-extra-tight text-gray-new-40 lg:flex-row lg:self-end lg:leading-tight sm:flex-col sm:self-start">
             <p>
-              <span className="lg:hidden">Copyright </span>Ⓒ 2024 GibsonAI, Inc.
+              <span className="lg:hidden">Copyright </span>Ⓒ {new Date().getFullYear()} GibsonAI,
+              Inc.
             </p>
           </div>
         </div>
