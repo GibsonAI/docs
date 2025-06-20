@@ -1,3 +1,5 @@
+[![GibsonAI](https://github.com/user-attachments/assets/1d767e68-b5b4-4bb5-8b61-7c97fca9b3fe)](https://docs.gibsonai.com/)
+
 # GibsonAI Docs
 
 ## Table of Contents
