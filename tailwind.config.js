@@ -23,13 +23,13 @@ module.exports = {
       black: {
         DEFAULT: '#1a1a1a',
         new: '#0c0d0d',
-        pure: '#000000',
+        pure: '#152126',
         fog: '#0d0e12',
       },
       white: '#ffffff',
       primary: {
-        1: '#00E599',
-        2: '#00cc88',
+        1: '#C0F910',
+        2: '#C0F910',
       },
       secondary: {
         1: '#ff4c79',
@@ -73,7 +73,7 @@ module.exports = {
         70: '#F0F075',
       },
       green: {
-        45: '#00E599',
+        45: '#C0F910',
       },
       blue: {
         80: '#ADE0EB',
@@ -88,8 +88,8 @@ module.exports = {
         70: '#B8ADEB',
       },
       code: {
-        'green-1': '#078345',
-        'green-2': '#47D18C',
+        'green-1': '#C0F910',
+        'green-2': '#C0F910',
         'blue-1': '#206CDF',
         'blue-2': '#66A3FF',
         'red-1': '#DA0B51',
