@@ -7,7 +7,11 @@ updatedOn: '2025-06-16T22:44:00.701Z'
 
 The GibsonAI CLI is a command-line interface that lets you manage GibsonAI directly from the terminal. The CLI enables a complete workflow for designing, deploying, and managing your database, as well as code generation. Code generation currently includes SQLAlchemy models and pydantic validation schemas, as well as FastAPI endpoints if you choose to self-host your CRUD API.
 
-🚀 Get set up in just a few steps with the [CLI Quickstart](/docs/reference/cli-quickstart).
+Get set up in just a few steps with the [CLI Quickstart](/docs/reference/cli-quickstart).
+
+<DetailIconCards>
+<a href="https://github.com/GibsonAI/cli" description="Manage GibsonAI directly from your terminal" icon="github">GibsonAI CLI GitHub Repo</a>
+</DetailIconCards>
 
 ## Install
 
@@ -124,7 +128,3 @@ usage: gibson [command] [subcommand]
 │                 │                                                                                                                   │                                                                                        │                                             │
 │ q               │ ask gibson a question using natural language                                                                      │
 ```
-
-## GitHub repository
-
-The GitHub repository for the Gibson CLI is found [here](https://github.com/GibsonAI/cli).

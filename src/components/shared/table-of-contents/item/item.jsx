@@ -3,7 +3,7 @@ import { AnimatePresence, LazyMotion, domAnimation, m } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 const linkClassName =
-  'py-1.5 flex items-start gap-2.5 text-sm leading-tight transition-colors duration-200 text-gray-new-40 hover:text-black-new dark:text-gray-new-90 dark:hover:text-white [&_code]:rounded-sm [&_code]:leading-none [&_code]:py-px [&_code]:bg-gray-new-94 [&_code]:px-1.5 [&_code]:font-mono [&_code]:font-normal dark:[&_code]:bg-gray-new-15';
+  'py-1.5 flex items-start gap-2.5 text-sm leading-tight transition-colors duration-200 text-gray-new-40 hover:text-black-new dark:text-gray-new-90 dark:hover:text-white [&_code]:rounded-sm [&_code]:leading-none [&_code]:py-px [&_code]:bg-[#C0F910] [&_code]:px-1.5 [&_code]:font-mono [&_code]:font-normal dark:[&_code]:bg-gray-new-15';
 
 const Item = ({
   title,
@@ -59,9 +59,9 @@ const Item = ({
           <>
             <span
               className={clsx(
-                'z-10 flex size-4 shrink-0 items-center justify-center rounded-full bg-gray-new-15 text-[10px] font-medium leading-none tracking-extra-tight outline outline-[3px] outline-white transition-colors duration-200 dark:outline-black-new',
+                'z-10 ml-1 flex size-4 shrink-0 items-center justify-center rounded-full bg-gray-new-15 text-[10px] font-medium leading-none tracking-extra-tight outline outline-[3px] outline-white transition-colors duration-200 dark:outline-[#2b4653]',
                 currentAnchor === id || index < currentIndex
-                  ? 'bg-gray-new-15 text-white dark:bg-gray-new-94 dark:text-black-new'
+                  ? 'bg-gray-new-15 text-white dark:bg-[#C0F910] dark:text-black-new'
                   : 'bg-gray-new-90 text-black-new dark:bg-gray-new-20 dark:text-gray-new-98'
               )}
             >
@@ -69,7 +69,7 @@ const Item = ({
             </span>
             <span
               className={clsx(
-                'absolute left-2 top-[3px] h-full w-px transition-colors duration-200 group-last:hidden',
+                'absolute left-3 top-[3px] h-full w-px transition-colors duration-200 group-last:hidden',
                 currentAnchor === id || index < currentIndex
                   ? 'bg-gray-new-40 dark:bg-gray-new-60'
                   : 'bg-gray-new-80 dark:bg-gray-new-15'
