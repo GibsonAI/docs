@@ -5,8 +5,8 @@ updatedOn: '2025-06-16T22:31:52.611Z'
 
 **GibsonAI** is an AI-powered developer platform that lets you design, build, and deploy production-grade serverless databases in minutes — using just natural language prompts.
 
-<CTA title="Manage GibsonAI from Cursor, Windsurf, and other AI tools ✨" 
-description="Manage GibsonAI databases from your favorite AI tools using simple, conversational commands with GibsonAI's MCP Server. <a href='https://www.gibsonai.com/resources/the-gibson-mcp-server'>Learn how</a> ➡️" isIntro></CTA>
+<CTA title="Manage GibsonAI from Cursor, Windsurf, and other AI tools" 
+description="Manage GibsonAI databases from your favorite AI tools using simple, conversational commands with GibsonAI's MCP Server. <a href='https://www.gibsonai.com/resources/the-gibson-mcp-server'>Learn how</a>" isIntro></CTA>
 
 <ChatOptions/>
 

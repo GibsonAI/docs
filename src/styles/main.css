@@ -88,6 +88,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Override border-gray-new-80 globally to #C0F910 and keep border width small */
+  .border-gray-new-80,
+  .border-\[--gray-new-80\] {
+    --tw-border-opacity: 1 !important;
+    border-color: #c0f910 !important;
+    border-width: 0.1px !important;
+  }
 }
 
 @keyframes lineAnimation {
