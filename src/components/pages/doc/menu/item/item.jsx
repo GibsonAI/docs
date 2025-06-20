@@ -31,10 +31,24 @@ const Item = ({
   const LinkTag = slug ? Link : 'button';
 
   const handleClick = () => {
-    if (items?.length && !activeMenuList.some((item) => item.title === title)) {
-      setActiveMenuList((prevList) => [...prevList, { title, slug }]);
+    if (
+      items?.length &&
+      !activeMenuList.some((item) =>
+        item.slug && slug ? item.slug === slug : item.title === title
+      )
+    ) {
+      // If this is a top-level menu (depth 0), close all others
+      if (!root) {
+        setActiveMenuList([{ title, slug }]);
+      } else {
+        setActiveMenuList((prevList) => [...prevList, { title, slug }]);
+      }
     }
-    if (slug && closeMobileMenu) closeMobileMenu();
+    if (slug) {
+      // Collapse all accordions immediately; keep only the root (HOME) menu so sidebar is still rendered.
+      setActiveMenuList((prev) => (prev.length ? [prev[0]] : []));
+      if (closeMobileMenu) closeMobileMenu();
+    }
   };
 
   return (

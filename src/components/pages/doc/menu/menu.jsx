@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import PropTypes from 'prop-types';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Link from 'components/shared/link';
 import { DOCS_BASE_PATH } from 'constants/docs';
@@ -21,7 +21,6 @@ const Section = ({
   collapsible,
   items,
   basePath,
-  setMenuHeight,
   menuWrapperRef,
   activeMenuList,
   setActiveMenuList,
@@ -67,33 +66,38 @@ const Section = ({
             transition={{ duration: 0.2 }}
           >
             <ul className={collapsible && 'mt-1'}>
-              {items.map((item, index) => (
-                <Item
-                  {...item}
-                  key={index}
-                  basePath={basePath}
-                  activeMenuList={activeMenuList}
-                  setActiveMenuList={setActiveMenuList}
-                  closeMobileMenu={closeMobileMenu}
-                >
-                  {item.items && (
-                    <Menu
-                      depth={depth + 1}
-                      title={item.title}
-                      slug={item.slug}
-                      basePath={basePath}
-                      icon={item.icon}
-                      items={item.items}
-                      parentMenu={{ title, slug }}
-                      setMenuHeight={setMenuHeight}
-                      menuWrapperRef={menuWrapperRef}
-                      activeMenuList={activeMenuList}
-                      setActiveMenuList={setActiveMenuList}
-                      closeMobileMenu={closeMobileMenu}
-                    />
-                  )}
-                </Item>
-              ))}
+              {items
+                .filter((child) => {
+                  // Only filter if parent has no slug (i.e., it's a header, not a link) AND child has no items (i.e., not a submenu group)
+                  if (!slug && child.title === title && !child.items) return false;
+                  return true;
+                })
+                .map((item, index) => (
+                  <Item
+                    {...item}
+                    key={index}
+                    basePath={basePath}
+                    activeMenuList={activeMenuList}
+                    setActiveMenuList={setActiveMenuList}
+                    closeMobileMenu={closeMobileMenu}
+                  >
+                    {item.items && (
+                      <Menu
+                        depth={depth + 1}
+                        title={item.title}
+                        slug={item.slug}
+                        basePath={basePath}
+                        icon={item.icon}
+                        items={item.items}
+                        parentMenu={{ title, slug }}
+                        menuWrapperRef={menuWrapperRef}
+                        activeMenuList={activeMenuList}
+                        setActiveMenuList={setActiveMenuList}
+                        closeMobileMenu={closeMobileMenu}
+                      />
+                    )}
+                  </Item>
+                ))}
             </ul>
           </m.div>
         </LazyMotion>
@@ -110,7 +114,7 @@ Section.propTypes = {
   section: PropTypes.string,
   collapsible: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.shape()),
-  setMenuHeight: PropTypes.func.isRequired,
+
   menuWrapperRef: PropTypes.any.isRequired,
   activeMenuList: PropTypes.arrayOf(
     PropTypes.shape({
@@ -131,7 +135,6 @@ const Menu = ({
   parentMenu = null,
   items = null,
   closeMobileMenu = null,
-  setMenuHeight,
   menuWrapperRef,
   activeMenuList,
   setActiveMenuList,
@@ -143,24 +146,19 @@ const Menu = ({
 
   const BackLinkTag = parentMenu?.slug ? Link : 'button';
 
-  const isActive = isRootMenu || activeMenuList.some((item) => item.title === title);
+  // Treat slug as primary identifier because multiple menu items can share a title.
+  const isActive =
+    isRootMenu ||
+    activeMenuList.some((item) =>
+      // If the current menu or recorded item has a slug, compare slugs, otherwise fall back to title.
+      item.slug && slug ? item.slug === slug : item.title === title
+    );
   const isLastActive =
-    activeMenuList[lastDepth]?.title === title || (isRootMenu && lastDepth === 0);
-
-  const updateMenuHeight = () => {
-    setMenuHeight(2000);
-    setTimeout(() => {
-      setMenuHeight(menuRef.current.scrollHeight);
-    }, 250);
-  };
-
-  // update menu height and scroll menu to top
-  useEffect(() => {
-    if (isLastActive && menuRef.current && menuRef.current.scrollHeight > 0 && setMenuHeight) {
-      setMenuHeight(menuRef.current.scrollHeight);
-      menuWrapperRef.current?.scrollTo(0, 0);
-    }
-  }, [isLastActive, setMenuHeight, menuWrapperRef]);
+    // Check by slug first; fall back to title if a slug is missing
+    (activeMenuList[lastDepth]?.slug && slug
+      ? activeMenuList[lastDepth].slug === slug
+      : activeMenuList[lastDepth]?.title === title) ||
+    (isRootMenu && lastDepth === 0);
 
   if (!isRootMenu && !isActive) return null;
 
@@ -171,17 +169,16 @@ const Menu = ({
   return (
     <div
       className={clsx(
-        'absolute left-0 top-0 w-full',
-        !isActive && 'pointer-events-none',
-        !isRootMenu && 'translate-x-full',
+        depth === 0 ? '' : 'pl-4',
+
         'lg:px-8 lg:pt-4 md:px-5',
         (isActive || isRootMenu) && 'opacity-100'
       )}
-      style={isRootMenu ? { transform: `translateX(${lastDepth * -100}%)` } : undefined}
       ref={menuRef}
     >
       {/* breadcrumbs, menu title and home link */}
-      {!isRootMenu && (
+      {/* Only render BackLinkTag if this is not a group header (i.e., has a slug or is a leaf) */}
+      {!isRootMenu && slug && (
         <BackLinkTag
           className="group relative z-50 flex w-full items-center pb-1.5 text-left font-medium leading-tight tracking-extra-tight text-black-new dark:text-white"
           to={`${basePath}${slug}`}
@@ -195,50 +192,51 @@ const Menu = ({
       <ul
         className={clsx('w-full', !isRootMenu && 'py-2.5', !isActive ? 'opacity-0' : 'opacity-100')}
       >
-        {items.map((item, index) =>
-          item.section ? (
-            <Section
-              key={index}
-              depth={depth}
-              {...item}
-              title={title}
-              slug={slug}
-              basePath={basePath}
-              closeMobileMenu={closeMobileMenu}
-              setMenuHeight={setMenuHeight}
-              menuWrapperRef={menuWrapperRef}
-              activeMenuList={activeMenuList}
-              setActiveMenuList={setActiveMenuList}
-              onCollapse={updateMenuHeight}
-            />
-          ) : (
-            <Item
-              key={index}
-              {...item}
-              basePath={basePath}
-              activeMenuList={activeMenuList}
-              setActiveMenuList={setActiveMenuList}
-              closeMobileMenu={closeMobileMenu}
-            >
-              {item.items && (
-                <Menu
-                  depth={depth + 1}
-                  title={item.title}
-                  slug={item.slug}
-                  icon={item.icon}
-                  items={item.items}
-                  basePath={basePath}
-                  parentMenu={{ title, slug }}
-                  setMenuHeight={setMenuHeight}
-                  menuWrapperRef={menuWrapperRef}
-                  activeMenuList={activeMenuList}
-                  setActiveMenuList={setActiveMenuList}
-                  closeMobileMenu={closeMobileMenu}
-                />
-              )}
-            </Item>
-          )
-        )}
+        {items
+          .filter((child) => {
+            // Only filter if parent has no slug (i.e., it's a header, not a link) AND child has no items (i.e., not a submenu group)
+            if (!slug && child.title === title && !child.items) return false;
+            return true;
+          })
+          .map((item, index) =>
+            item.section ? (
+              <Section
+                key={index}
+                depth={depth}
+                {...item}
+                basePath={basePath}
+                menuWrapperRef={menuWrapperRef}
+                activeMenuList={activeMenuList}
+                setActiveMenuList={setActiveMenuList}
+                closeMobileMenu={closeMobileMenu}
+              />
+            ) : (
+              <Item
+                key={index}
+                {...item}
+                basePath={basePath}
+                activeMenuList={activeMenuList}
+                setActiveMenuList={setActiveMenuList}
+                closeMobileMenu={closeMobileMenu}
+              >
+                {item.items && (
+                  <Menu
+                    depth={depth + 1}
+                    title={item.title}
+                    slug={item.slug}
+                    icon={item.icon}
+                    items={item.items}
+                    basePath={basePath}
+                    parentMenu={{ title, slug }}
+                    menuWrapperRef={menuWrapperRef}
+                    activeMenuList={activeMenuList}
+                    setActiveMenuList={setActiveMenuList}
+                    closeMobileMenu={closeMobileMenu}
+                  />
+                )}
+              </Item>
+            )
+          )}
       </ul>
 
       {/* back to Docs link */}
@@ -279,7 +277,7 @@ Menu.propTypes = {
       ariaLabel: PropTypes.string,
     })
   ),
-  setMenuHeight: PropTypes.func.isRequired,
+
   menuWrapperRef: PropTypes.any.isRequired,
   activeMenuList: PropTypes.arrayOf(
     PropTypes.shape({
