@@ -16,7 +16,7 @@ const checkBlacklistEmails = (field) => {
   return {
     name: 'domain-not-blacklisted',
     exclusive: true,
-    message: `Ooops! Only work emails allowed. If this account is for you, <a href="${LINKS.signup}">please sign up to Neon here</a>.`,
+    message: `Ooops! Only work emails allowed. If this account is for you, <a href="${LINKS.signup}">please sign up to GibsonAI here</a>.`,
     test: (value) => {
       const domain = value.split('@')[1];
       return !emailBlacklist.includes(domain);

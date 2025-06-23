@@ -4,7 +4,7 @@ import Button from 'components/shared/button';
 import links from 'constants/links';
 
 const SidebarCta = ({
-  title = 'Sign Up for Neon',
+  title = 'Sign Up for GibsonAI',
   description = 'Start on the free plan - No credit card required.',
   cta_text = 'Get Started',
   cta_url = links.signup,

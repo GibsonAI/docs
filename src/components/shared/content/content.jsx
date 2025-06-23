@@ -36,13 +36,11 @@ import Button from 'components/shared/button';
 import CodeBlock from 'components/shared/code-block';
 import ComputeCalculator from 'components/shared/compute-calculator';
 import CtaBlock from 'components/shared/cta-block';
-import DeployPostgresButton from 'components/shared/deploy-postgres-button';
 import DocCta from 'components/shared/doc-cta';
 import ExternalCode from 'components/shared/external-code';
 import ImageZoom from 'components/shared/image-zoom';
 import InkeepEmbedded from 'components/shared/inkeep-embedded';
 import LatencyCalculator from 'components/shared/latency-calculator';
-import RequestForm from 'components/shared/request-form';
 import getCodeProps from 'lib/rehype-code-props';
 
 import sharedMdxComponents from '../../../../content/docs/shared-content';
@@ -136,7 +134,6 @@ const getComponents = (withoutAnchorHeading, isReleaseNote, isPostgres, isTempla
   InfoBlock,
   LinkPreview,
   DocsList,
-  RequestForm,
   LatencyCalculator,
   CTA: isTemplate ? CtaBlock : DocCta,
   Testimonial,
@@ -148,7 +145,6 @@ const getComponents = (withoutAnchorHeading, isReleaseNote, isPostgres, isTempla
   InkeepEmbedded,
   Video,
   Steps,
-  DeployPostgresButton,
   ChatOptions,
   CheckList,
   CheckItem,

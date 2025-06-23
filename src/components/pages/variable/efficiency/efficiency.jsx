@@ -11,18 +11,6 @@ import List from '../list';
 import Section from '../section';
 
 const items = [
-  {
-    icon: autoscaleIcon,
-    text: 'Neon is serverless Postgres. Instead of provisioning a fixed CPU/memory, you specify an autoscaling range. ',
-  },
-  {
-    icon: performanceIcon,
-    text: 'Your database will autoscale up and down automatically between those limits, matching your app’s traffic.',
-  },
-  {
-    icon: resizeIcon,
-    text: 'Autoscaling is nearly instantaneous, without downtime. Read about <a href="/docs/guides/autoscaling-algorithm">our autoscaling algorithm</a> and <a href="/blog/postgres-autoscaling-aurora-serverless-v2-vs-neon">how it compares to Aurora’s</a>.',
-  },
 ];
 
 const Efficiency = ({ title }) => (
@@ -37,7 +25,7 @@ const Efficiency = ({ title }) => (
         company: 'Recrowd',
         avatar: pieralbertoColonboAvatar,
       }}
-      url={`${LINKS.blog}/how-recrowd-uses-neon-autoscaling-to-meet-fluctuating-demand`}
+      url={`${LINKS.blog}/`}
     />
   </Section>
 );

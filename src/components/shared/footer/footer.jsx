@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import Container from 'components/shared/container';
-import StatusBadge from 'components/shared/footer/status-badge';
 import ThemeSelect from 'components/shared/footer/theme-select';
 import Link from 'components/shared/link';
 import Logo from 'components/shared/logo';
@@ -35,7 +34,6 @@ const Footer = ({ hasThemesSupport = false, theme = null }) => {
                 to="https://www.gibsonai.com/"
               />
 
-              {/* <StatusBadge hasThemesSupport={hasThemesSupport} isDarkTheme={isDarkTheme} /> */}
               {/* {hasThemesSupport && <ThemeSelect className="mt-7 xl:mt-6 md:mt-3" />} */}
             </div>
           </div>

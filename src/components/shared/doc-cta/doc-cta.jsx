@@ -6,9 +6,9 @@ import LINKS from 'constants/links';
 import Button from '../button';
 
 const DEFAULT_DATA = {
-  title: 'Try it on Neon!',
+  title: 'Try it on GibsonAI!',
   description:
-    'Neon is Serverless Postgres built for the cloud. Explore Postgres features and functions in our user-friendly SQL editor. Sign up for a free account to get started.',
+    'GibsonAI is an AI-powered developer platform that lets you design, build, and deploy production-grade serverless databases in minutes — using just natural language prompts.',
   buttonText: 'Sign Up',
   buttonUrl: LINKS.signup,
 };

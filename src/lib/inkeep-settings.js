@@ -26,10 +26,6 @@ const aiChatSettings = {
   botName: 'GibsonAI AI',
   placeholder: 'Ask anything...',
   quickQuestions: [
-    'What’s Neon?',
-    'How do I sign up for Neon?',
-    'How to create a project?',
-    'How to get started with the Neon API?',
   ],
   botAvatarSrcUrl: '/inkeep/images/bot.svg',
   botAvatarDarkSrcUrl: '/inkeep/images/bot-dark.svg',
@@ -38,18 +34,6 @@ const aiChatSettings = {
   isChatSharingEnabled: true,
   shareChatUrlBasePath: 'https://gibsonai.com',
   getHelpCallToActions: [
-    {
-      type: 'OPEN_LINK',
-      icon: { builtIn: 'FaDiscord' },
-      name: 'Discord',
-      url: 'https://discord.gg/92vNTzKDGp',
-    },
-    {
-      type: 'OPEN_LINK',
-      icon: { builtIn: 'IoChatbubblesOutline' },
-      name: 'GibsonAI Support',
-      url: 'https://console.neon.com/app/projects?modal=support',
-    },
   ],
 };
 

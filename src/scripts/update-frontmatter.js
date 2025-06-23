@@ -9,20 +9,6 @@ const matter = require('gray-matter');
 // as GitHub has the rate limit for unauthenticated requests (60 requests per hour),
 // the script was run manually and the date was hardcoded in the frontmatter of the docs.
 
-// const octokit = new Octokit({
-//   auth: process.env.GITHUB_TOKEN,
-// });
-// async function getLastUpdateDate(filePath) {
-//   const repoOwner = 'neondatabase';
-//   const repoName = 'website';
-//   const res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
-//     owner: repoOwner,
-//     repo: repoName,
-//     path: filePath,
-//   });
-
-//   return res.data[0].commit.author.date;
-// }
 
 const updateFrontmatter = async () => {
   // const files = await glob.sync(`content/docs/**/*.md`, {

@@ -9,31 +9,7 @@ import tableIcon from 'icons/security/table.svg';
 import userLockIcon from 'icons/security/user-lock.svg';
 
 const FEATURES = [
-  {
-    title: 'Neon PostgreSQL Service',
-    description: 'Secure, scalable, cloud-hosted PostgreSQL database.',
-    icon: dataIcon,
-  },
-  {
-    title: 'Cloud Infrastructure',
-    description: 'Hosted on AWS and Azure, leveraging built-in security controls.',
-    icon: cloudIcon,
-  },
-  {
-    title: 'Data Storage & Processing',
-    description: 'Encryption, access controls, and secure data retention policies.',
-    icon: tableIcon,
-  },
-  {
-    title: 'Access & Security Controls ',
-    description: 'Identity management, monitoring, and compliance enforcement.',
-    icon: privacyIcon,
-  },
-  {
-    title: 'Personnel Security',
-    description: 'Employee background checks, security training, and access management.',
-    icon: userLockIcon,
-  },
+
 ];
 
 const TrustCenter = () => (

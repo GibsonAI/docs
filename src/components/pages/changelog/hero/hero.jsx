@@ -6,7 +6,7 @@ import { CHANGELOG_BASE_PATH } from 'constants/docs';
 import RSSLogo from 'icons/rss.inline.svg';
 
 const TITLE = 'Changelog';
-const DESCRIPTION = 'The latest product updates from Neon';
+const DESCRIPTION = 'The latest product updates from GibsonAI';
 
 const Hero = ({ className = null, withContainer = false }) => {
   const Tag = withContainer ? Container : 'div';
