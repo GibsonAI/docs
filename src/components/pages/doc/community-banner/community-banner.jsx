@@ -14,9 +14,9 @@ const logos = {
 
 const CommunityBanner = ({ buttonText, buttonUrl, children = null, logo }) => (
   <section className="not-prose relative my-10">
-    <span className="absolute -inset-px block rounded-[10px] bg-[linear-gradient(90deg,rgba(48,50,54,1)50%,rgba(187, 228, 23, 0.85)100%)]" />
-    <span className="absolute -top-px right-1.5 h-px w-[28%] bg-[radial-gradient(circle,rgba(183, 229, 0, 0.7)0%,rgba(0,229,153,0.05)100%)] sm:hidden" />
-    <div className="relative flex items-center overflow-hidden rounded-[10px] bg-background-main p-8 sm:p-6 border border-[#BBE417]">
+    <span className="absolute -inset-px block rounded-[10px] bg-[linear-gradient(90deg,rgba(21, 34, 51,0)50%,rgba(187, 228, 23, 0.85)100%)]" />
+    <span className="absolute -top-px right-1.5 h-px w-[28%] bg-[radial-gradient(circle,rgba(183, 229, 0, 0.7)0%,rgba(21, 34, 51,0.05)100%)] sm:hidden" />
+    <div className="relative flex items-center overflow-hidden rounded-[10px] bg-[#152233] p-8 sm:p-6">
       <div className="flex w-full items-center">
         <h2 className="!my-0 max-w-[334px] text-[26px] font-semibold leading-dense tracking-extra-tight text-white xs:text-2xl">
           {children}

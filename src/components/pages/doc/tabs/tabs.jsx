@@ -8,8 +8,8 @@ const Tabs = ({ labels = [], children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <figure className="my-5 max-w-full overflow-hidden rounded-md bg-gray-new-98 dark:bg-gray-new-10">
-      <div className="no-scrollbars bg-grey-15 relative flex w-full flex-nowrap overflow-auto after:absolute after:bottom-0 after:h-px after:w-full after:bg-gray-new-90 dark:after:bg-gray-new-20">
+    <figure className="my-5 max-w-full overflow-hidden rounded-md bg-[#152233]">
+      <div className="no-scrollbars bg-[#152233] relative flex w-full flex-nowrap overflow-auto after:absolute after:bottom-0 after:h-px after:w-full after:bg-gray-new-90 dark:after:bg-gray-new-20">
         {labels.map((label, index) => (
           <button
             className={clsx(
