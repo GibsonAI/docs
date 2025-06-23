@@ -9,9 +9,10 @@ import AuthIcon from 'icons/docs/sidebar/auth.inline.svg';
 import AwardIcon from 'icons/docs/sidebar/award.inline.svg';
 import AzureIcon from 'icons/docs/sidebar/azure.inline.svg';
 import BillingIcon from 'icons/docs/sidebar/billing.inline.svg';
+import BookIcon from 'icons/docs/sidebar/book.inline.svg';
 import ChangelogIcon from 'icons/docs/sidebar/changelog.inline.svg';
+import ChatIcon from 'icons/docs/sidebar/chat.inline.svg';
 import CliIcon from 'icons/docs/sidebar/cli.inline.svg';
-import CommunityIcon from 'icons/docs/sidebar/community.inline.svg';
 import ConnectIcon from 'icons/docs/sidebar/connect.inline.svg';
 import ContainerIcon from 'icons/docs/sidebar/container.inline.svg';
 import DocsIcon from 'icons/docs/sidebar/docs.inline.svg';
@@ -19,17 +20,17 @@ import ExtensionIcon from 'icons/docs/sidebar/extension.inline.svg';
 import FeaturesIcon from 'icons/docs/sidebar/features.inline.svg';
 import FeedsIcon from 'icons/docs/sidebar/feeds.inline.svg';
 import FrameworksIcon from 'icons/docs/sidebar/frameworks.inline.svg';
-import GetStartedIcon from 'icons/docs/sidebar/get-started.inline.svg';
 import GlossaryIcon from 'icons/docs/sidebar/glossary.inline.svg';
 import HomeIcon from 'icons/docs/sidebar/home.inline.svg';
 import ImportIcon from 'icons/docs/sidebar/import.inline.svg';
+import InfoIcon from 'icons/docs/sidebar/info.inline.svg';
 import IntegrationsIcon from 'icons/docs/sidebar/integrations.inline.svg';
 import LanguagesIcon from 'icons/docs/sidebar/languages.inline.svg';
 import LockIcon from 'icons/docs/sidebar/lock.inline.svg';
 import OrmIcon from 'icons/docs/sidebar/orm.inline.svg';
 import PartnerGuideIcon from 'icons/docs/sidebar/partner-guide.inline.svg';
 import PlatformIcon from 'icons/docs/sidebar/platform.inline.svg';
-import PostgresGuidesIcon from 'icons/docs/sidebar/postgres-guides.inline.svg';
+import PlayIcon from 'icons/docs/sidebar/play.inline.svg';
 import RegionsIcon from 'icons/docs/sidebar/regions.inline.svg';
 import ReplicationsIcon from 'icons/docs/sidebar/replications.inline.svg';
 import ReportIcon from 'icons/docs/sidebar/report.inline.svg';
@@ -47,22 +48,24 @@ import TutorialIcon from 'icons/docs/sidebar/tutorial.inline.svg';
 import UpgradeIcon from 'icons/docs/sidebar/upgrade.inline.svg';
 import UseCaseIcon from 'icons/docs/sidebar/use-case.inline.svg';
 import VersionIcon from 'icons/docs/sidebar/version.inline.svg';
-import WhyGibsonAiIcon from 'icons/docs/sidebar/why-gibsonai.inline.svg';
 import WorkflowsIcon from 'icons/docs/sidebar/workflows.inline.svg';
 
 const icons = {
   'ai-agent': AiAgentIcon,
-  anonymize: AnonymizeIcon,
+  'partner-guide': PartnerGuideIcon,
+  'use-case': UseCaseIcon,
   ai: AiIcon,
+  anonymize: AnonymizeIcon,
   api: ApiIcon,
   architecture: ArchitectureIcon,
   auth: AuthIcon,
   award: AwardIcon,
   azure: AzureIcon,
   billing: BillingIcon,
+  book: BookIcon,
   changelog: ChangelogIcon,
+  chat: ChatIcon,
   cli: CliIcon,
-  community: CommunityIcon,
   connect: ConnectIcon,
   container: ContainerIcon,
   docs: DocsIcon,
@@ -70,17 +73,16 @@ const icons = {
   features: FeaturesIcon,
   feeds: FeedsIcon,
   frameworks: FrameworksIcon,
-  'get-started': GetStartedIcon,
   glossary: GlossaryIcon,
   home: HomeIcon,
   import: ImportIcon,
+  info: InfoIcon,
   integrations: IntegrationsIcon,
   languages: LanguagesIcon,
   lock: LockIcon,
   orm: OrmIcon,
-  'partner-guide': PartnerGuideIcon,
   platform: PlatformIcon,
-  'postgres-guides': PostgresGuidesIcon,
+  play: PlayIcon,
   regions: RegionsIcon,
   replications: ReplicationsIcon,
   report: ReportIcon,
@@ -96,9 +98,7 @@ const icons = {
   terraform: TerraformIcon,
   tutorial: TutorialIcon,
   upgrade: UpgradeIcon,
-  'use-case': UseCaseIcon,
   version: VersionIcon,
-  'why-gibsonai': WhyGibsonAiIcon,
   workflows: WorkflowsIcon,
 };
 

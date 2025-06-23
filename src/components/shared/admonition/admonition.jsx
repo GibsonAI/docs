@@ -10,8 +10,8 @@ import WarningIcon from 'icons/docs/admonition/warning.inline.svg';
 
 const themes = {
   note: {
-    titleClassName: 'text-[#2982FF] dark:text-[#4C97FF]',
-    borderClassName: 'border-[#2982FF] dark:border-[#4C97FF]',
+    titleClassName: 'text-primary-2',
+    borderClassName: 'border-primary-2',
     icon: NoteIcon,
   },
   important: {
@@ -49,9 +49,9 @@ const Admonition = ({ children = null, type = 'note', title = null, asHTML = fal
   return (
     <div
       className={clsx(
-        'admonition not-prose mt-5 rounded-[1px] border-l-4 bg-gray-new-98 px-5 py-4 dark:bg-gray-new-8',
+        'admonition not-prose mt-5 rounded-[1px] border-l-4 bg-[#152233] px-5 py-4 dark:bg-[#152233]',
         theme.borderClassName,
-        '[&_pre[data-language]]:!bg-white [&_pre[data-language]]:dark:!bg-gray-new-8 [&_pre]:px-4 [&_pre]:py-3 [&_pre_code]:!text-sm'
+        '[&_pre[data-language]]:!bg-white [&_pre[data-language]]:dark:!bg-[#152233] [&_pre]:px-4 [&_pre]:py-3 [&_pre_code]:!text-sm'
       )}
     >
       <div className={clsx('flex items-center gap-1.5', theme.titleClassName)}>

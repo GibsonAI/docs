@@ -454,7 +454,7 @@ To change text in CTA block, you can pass to the component props `title`, `descr
 ## Steps
 
 To display numbered steps, wrap the content with `Steps` component.  
-Steps will be splitted by `h2` headings.
+Steps will be split by `h2` headings.
 
 ```md
 <Steps>
@@ -622,7 +622,7 @@ Create a markdown file in folder `content/docs/shared-content/`, add to `sharedM
 
 ```js
 const sharedMdxComponents = {
-  // ConponentName: 'shared-content/component-filename'
+  // ComponentName: 'shared-content/component-filename'
   NeedHelp: 'shared-content/need-help',
 };
 
