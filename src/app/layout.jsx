@@ -3,13 +3,12 @@ import 'styles/globals.css';
 import Script from 'next/script';
 
 import { ActiveLabelProvider } from 'components/pages/doc/code-tabs/CodeTabsContext';
-
 import ModeToggler from 'components/pages/doc/mode-toggler';
 import Sidebar from 'components/pages/doc/sidebar';
 import Container from 'components/shared/container';
 import Layout from 'components/shared/layout';
-import { getSidebar } from 'utils/api-docs';
 import { DOCS_BASE_PATH } from 'constants/docs';
+import { getSidebar } from 'utils/api-docs';
 
 import inter from './fonts';
 import ThemeProvider from './provider';
@@ -38,7 +37,7 @@ const RootLayout = async ({ children }) => {
       <body>
         <ThemeProvider>
           {/* Shared site chrome – header, footer, theme switching etc. */}
-          <Layout headerTheme="dark" footerTheme="dark" isHeaderSticky sidebar={sidebar}>
+          <Layout sidebar={sidebar} headerTheme="dark" footerTheme="dark" isHeaderSticky>
             <Container
               size="md"
               className="grid grid-cols-[16rem,1fr] gap-x-6 pt-10 md:block md:pt-6"

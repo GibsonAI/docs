@@ -1,15 +1,13 @@
 'use client';
 
-import Sidebar from 'components/pages/doc/sidebar';
-import { DOCS_BASE_PATH } from 'constants/docs';
-
 import clsx from 'clsx';
 import { AnimatePresence, LazyMotion, domAnimation, m } from 'framer-motion';
 import PropTypes from 'prop-types';
 
+import Sidebar from 'components/pages/doc/sidebar';
 import Button from 'components/shared/button';
+import { DOCS_BASE_PATH } from 'constants/docs';
 import LINKS from 'constants/links';
-
 import useMobileMenu from 'hooks/use-mobile-menu';
 
 import Burger from '../burger';
@@ -67,7 +65,7 @@ const MobileMenu = ({ sidebar, isDarkTheme = false, isDocPage = false, docPageTy
                   <Sidebar
                     className="w-full"
                     sidebar={sidebar}
-                    slug={''}
+                    slug=""
                     basePath={DOCS_BASE_PATH}
                     isDocPage={isDocPage}
                     docPageType={docPageType}

@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
+import DocSidebar from 'components/pages/doc/sidebar';
 import Container from 'components/shared/container';
 import Link from 'components/shared/link';
 import Logo from 'components/shared/logo';
+import { DOCS_BASE_PATH } from 'constants/docs';
 import LINKS from 'constants/links';
 
 import HeaderWrapper from './header-wrapper';
 import MobileMenu from './mobile-menu';
-import DocSidebar from 'components/pages/doc/sidebar';
-import { DOCS_BASE_PATH } from 'constants/docs';
 
 const Header = ({
   className = null,
