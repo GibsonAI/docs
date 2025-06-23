@@ -1,7 +1,7 @@
 - section: Get Started
   items:
     - title: What is GibsonAI?
-      icon: why-neon
+      icon: why-gibsonai
       slug: get-started-with-gibsonai/what-gibsonai
 
     - title: Quickstarts

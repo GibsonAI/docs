@@ -11,28 +11,22 @@ import createApp from './images/create-app.jpg';
 
 const ITEMS = [
   {
-    title: 'Connect Neon via MCP Server',
+    title: 'Connect GibsonAI via MCP Server',
     description:
-      'Neon lets you connect AI tools like Cursor, Windsurf, Zed, Claude Desktop, Cline and more right from the Neon console.',
+      'GibsonAI lets you connect AI tools like Cursor, Windsurf, Zed, Claude Desktop, Cline and more right from the GibsonAI.',
     link: {
       text: 'Sign up now',
       url: LINKS.signup,
     },
     image: aiTools,
-  },
-  {
-    title: 'Database with Neon Auth',
-    description:
-      'For a seamless experience when prompting or vibe coding full stack apps with agents like&nbsp;Replit, v0, Lovable, Bolt and more.',
-    image: createApp,
-  },
+  }
 ];
 
 const Usage = () => (
   <section className="usage safe-paddings relative mt-[200px] xl:mt-[176px] lg:mt-[152px] md:mt-[104px]">
     <Container className="md:max-w-sm md:px-5" size="768">
       <h2 className="font-title text-[52px] font-medium leading-none tracking-extra-tight xl:text-5xl lg:text-4xl md:text-[32px]">
-        Neon lets you ship faster with AI
+        GibsonAI lets you ship faster with AI
       </h2>
       <ul className="mt-14 space-y-[72px] lg:mt-12 lg:space-y-16 md:mx-auto md:mt-10 md:space-y-12">
         {ITEMS.map(({ title, description, link, image }, index) => (

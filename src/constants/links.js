@@ -76,6 +76,6 @@ export default {
   // Copilot
   discordCopilot: 'https://discord.com/channels/1176467419317940276/1222626436502782013',
   vscodeCopilot:
-    'https://marketplace.visualstudio.com/items?itemName=buildwithlayer.neon-integration-expert-15j6N',
+    '',
   bookMeeting: 'https://calendly.com/d/cm8j-8yw-fq8',
 };

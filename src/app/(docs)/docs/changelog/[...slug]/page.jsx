@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
 
   let label = 'Changelog';
-  let description = 'The latest product updates from Neon';
+  let description = 'The latest product updates from GibsonAI';
   let socialPreviewTitle = 'Changelog';
   const currentSlug = slug.join('/');
   const isChangelogPage = CHANGELOG_SLUG_REGEX.test(currentSlug);
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }) {
   const encodedLabel = Buffer.from(socialPreviewTitle ?? label).toString('base64');
 
   return getMetadata({
-    title: `${label} - Neon`,
+    title: `${label} - GibsonAI`,
     description,
     pathname: `${CHANGELOG_BASE_PATH}${currentSlug}`,
     imagePath: `${VERCEL_URL}/docs/og?title=${encodedLabel}`,
@@ -80,7 +80,7 @@ const ChangelogPost = async ({ currentSlug }) => {
     datePublished: date,
     author: {
       '@type': 'Organization',
-      name: 'Neon',
+      name: 'GibsonAI',
     },
   };
 

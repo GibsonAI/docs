@@ -26,7 +26,6 @@ import ImportIcon from 'icons/docs/sidebar/import.inline.svg';
 import IntegrationsIcon from 'icons/docs/sidebar/integrations.inline.svg';
 import LanguagesIcon from 'icons/docs/sidebar/languages.inline.svg';
 import LockIcon from 'icons/docs/sidebar/lock.inline.svg';
-import NeonTwin from 'icons/docs/sidebar/neon-twin.inline.svg';
 import OrmIcon from 'icons/docs/sidebar/orm.inline.svg';
 import PartnerGuideIcon from 'icons/docs/sidebar/partner-guide.inline.svg';
 import PlatformIcon from 'icons/docs/sidebar/platform.inline.svg';
@@ -48,7 +47,7 @@ import TutorialIcon from 'icons/docs/sidebar/tutorial.inline.svg';
 import UpgradeIcon from 'icons/docs/sidebar/upgrade.inline.svg';
 import UseCaseIcon from 'icons/docs/sidebar/use-case.inline.svg';
 import VersionIcon from 'icons/docs/sidebar/version.inline.svg';
-import WhyNeonIcon from 'icons/docs/sidebar/why-neon.inline.svg';
+import WhyGibsonAiIcon from 'icons/docs/sidebar/why-gibsonai.inline.svg';
 import WorkflowsIcon from 'icons/docs/sidebar/workflows.inline.svg';
 
 const icons = {
@@ -78,7 +77,6 @@ const icons = {
   integrations: IntegrationsIcon,
   languages: LanguagesIcon,
   lock: LockIcon,
-  'neon-twin': NeonTwin,
   orm: OrmIcon,
   'partner-guide': PartnerGuideIcon,
   platform: PlatformIcon,
@@ -100,7 +98,7 @@ const icons = {
   upgrade: UpgradeIcon,
   'use-case': UseCaseIcon,
   version: VersionIcon,
-  'why-neon': WhyNeonIcon,
+  'why-gibsonai': WhyGibsonAiIcon,
   workflows: WorkflowsIcon,
 };
 

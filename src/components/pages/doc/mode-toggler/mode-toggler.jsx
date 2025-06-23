@@ -62,7 +62,7 @@ const ModeToggler = ({ className, isAiChatPage }) => {
       />
       {/* <ToggleButton
         src={LINKS.aiChat}
-        title="Ask Neon AI"
+        title="Ask GibsonAi AI"
         isActive={isAiChatPage}
         onClick={() => setPreviousPage(pathname)}
       /> */}

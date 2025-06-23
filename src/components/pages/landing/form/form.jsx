@@ -264,7 +264,7 @@ const Form = ({
         </div>
         {isAzurePage && (
           <p className="mt-4 px-8 text-[13px] font-light text-gray-new-60 lg:px-1">
-            Neon will contact you at the information above with relevant content, products, and
+            GibsonAI will contact you at the information above with relevant content, products, and
             services. You may unsubscribe at any time. For more info, see our{' '}
             <Link className="whitespace-nowrap" to={LINKS.privacyPolicy} theme="green-underlined">
               Privacy Policy
