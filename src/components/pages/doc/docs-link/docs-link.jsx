@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import LinkPreview from 'components/pages/doc/link-preview';
+
 import Link from 'components/shared/link';
 import getGlossaryItem from 'utils/get-glossary-item';
 
@@ -22,11 +22,19 @@ const DocsLink = ({ href, children, ...otherProps }) => {
   if (isGlossary) {
     const glossaryItem = getGlossaryItem(href);
     if (glossaryItem) {
-      const { title, preview } = glossaryItem;
+      const { title } = glossaryItem;
       return (
-        <LinkPreview href={href} title={title} preview={preview} {...otherProps}>
+        <Link
+          to={href}
+          title={title}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+          icon={icon}
+          className="text-[#c0f910] transition-colors duration-200"
+          {...otherProps}
+        >
           {children}
-        </LinkPreview>
+        </Link>
       );
     }
   }
@@ -37,6 +45,7 @@ const DocsLink = ({ href, children, ...otherProps }) => {
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener noreferrer' : undefined}
       icon={icon}
+      className="text-[#c0f910] transition-colors duration-200"
       {...otherProps}
     >
       {children}

@@ -11,27 +11,21 @@ GibsonAI Model Context Protocol (MCP) server allows tools like Cursor, Windsurf,
 
 The Model Context Protocol (MCP) is a standardized way for AI tools to interact with GibsonAI projects and databases using natural language, providing secure and contextual access to your data and infrastructure.
 
-<DetailIconCards>
-<a href="https://github.com/GibsonAI/mcp" description="A Model Context Protocol (MCP) server that enables AI tools to interact with GibsonAI" icon="github">GibsonAI MCP Server</a>
-</DetailIconCards>
+- [GibsonAI MCP Server](https://github.com/GibsonAI/mcp) - A Model Context Protocol (MCP) server that enables AI tools to interact with GibsonAI.
 
 ## Integrate GibsonAI in your IDE
 
 These tools leverage the GibsonAI MCP server to provide natural language interfaces and
 AI-enhanced database management capabilities within your preferred development environment.
 
-<DetailIconCards>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#vs-code-github-copilot-setup" description="AI-enhanced database management in Visual Studo Code IDE" icon="openai">VS Code + GitHub Copilot</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#claude-desktop-setup" description="Use natural language to manage your databases with Claude Desktop and GibsonAI MCP server" icon="openai">Claude Desktop</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#cursor-setup" description="AI-enhanced database management in Cursor IDE" icon="openai">Cursor</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#windsurf-setup" description="AI-enhanced database management in Windsurf Editor" icon="openai">Windsurf</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#cline-vs-code-extension-setup" description="AI-enhanced database management with Cline" icon="openai">Cline</a>
-</DetailIconCards>
+- [VS Code + GitHub Copilot](/docs/ai/connect-mcp-clients-to-gibsonai#vs-code-github-copilot-setup) - AI-enhanced database management in Visual Studo Code IDE.
+- [Claude Desktop](/docs/ai/connect-mcp-clients-to-gibsonai#claude-desktop-setup) - Use natural language to manage your databases with Claude Desktop and GibsonAI MCP server.
+- [Cursor](/docs/ai/connect-mcp-clients-to-gibsonai#cursor-setup) - AI-enhanced database management in Cursor IDE.
+- [Windsurf](/docs/ai/connect-mcp-clients-to-gibsonai#windsurf-setup) - AI-enhanced database management in Windsurf Editor.
+- [Cline](/docs/ai/connect-mcp-clients-to-gibsonai#cline-vs-code-extension-setup) - AI-enhanced database management with Cline.
 
 ## Use with Agent frameworks
 
 Build AI agents using popular frameworks that integrate with GibsonAI.
 
-<DetailIconCards>
-<a href="https://www.gibsonai.com/resources/building-a-sales-contact-aggregator-with-gibsonai-and-crew-ai" description="Building a Sales Contact Aggregator with GibsonAI and Crew AI" icon="openai">CrewAI</a>
-</DetailIconCards>
+- [CrewAI](https://www.gibsonai.com/resources/building-a-sales-contact-aggregator-with-gibsonai-and-crew-ai) - Building a Sales Contact Aggregator with GibsonAI and Crew AI.

@@ -48,7 +48,7 @@ const buildNestedToc = (headings, currentLevel, currentIndex = 0) => {
         const nextDepth =
           typeof headings[0] === 'string'
             ? parseMDXHeading(headings[0])[0]
-            : headings[0].title.match(/^#+/)?.[0]?.length - 1 || 1;
+            : (headings[0].title.match(/^#+/)?.[0]?.length || 2) - 1;
 
         if (nextDepth > currentLevel) {
           tocItem.items = buildNestedToc(headings, currentLevel + 1, localIndex);

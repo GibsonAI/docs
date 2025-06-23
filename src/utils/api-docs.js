@@ -37,16 +37,18 @@ const getAllPosts = async () => {
   const slugs = await getPostSlugs(DOCS_DIR_PATH);
   return slugs
     .map((slug) => {
-      if (!getPostBySlug(slug, DOCS_DIR_PATH)) return;
-      const data = getPostBySlug(slug, DOCS_DIR_PATH);
-
-      const slugWithoutFirstSlash = slug.slice(1);
+      const post = getPostBySlug(slug, DOCS_DIR_PATH);
+      if (!post) {
+        return null;
+      }
       const {
         data: { title, subtitle, isDraft, redirectFrom },
         content,
-      } = data;
+      } = post;
+      const slugWithoutFirstSlash = slug.slice(1);
       return { slug: slugWithoutFirstSlash, title, subtitle, isDraft, content, redirectFrom };
     })
+    .filter(Boolean)
     .filter((item) => process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || !item.isDraft);
 };
 
@@ -73,15 +75,17 @@ const getAllChangelogs = async () => {
 
   return slugs
     .map((slug) => {
-      if (!getPostBySlug(slug, CHANGELOG_DIR_PATH)) return;
+      const post = getPostBySlug(slug, CHANGELOG_DIR_PATH);
+      if (!post) {
+        return null;
+      }
       const {
         data: { title, isDraft, redirectFrom },
         content,
-      } = getPostBySlug(slug, CHANGELOG_DIR_PATH);
+      } = post;
       const slugWithoutFirstSlash = slug.slice(1);
       const date = slugWithoutFirstSlash;
 
-      // eslint-disable-next-line consistent-return
       return {
         title: title || content.match(/# (.*)/)?.[1],
         slug: slugWithoutFirstSlash,
@@ -92,6 +96,7 @@ const getAllChangelogs = async () => {
         redirectFrom,
       };
     })
+    .filter(Boolean)
     .filter((item) => process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || !item.isDraft);
 };
 

@@ -1,16 +1,16 @@
 - section: Get Started
   items:
     - title: What is GibsonAI?
-      icon: why-neon
+      icon: why-gibson
       slug: get-started-with-gibsonai/what-gibsonai
 
     - title: Quickstarts
       icon: get-started
       items:
-          - title: 1 - Playing with GibsonAI
-            slug: get-started-with-gibsonai/signing-up
-          - title: 2 - Connect GibsonAI to your stack
-            slug: get-started-with-gibsonai/connect-gibsonai
+        - title: 1 - Playing with GibsonAI
+          slug: get-started-with-gibsonai/signing-up
+        - title: 2 - Connect GibsonAI to your stack
+          slug: get-started-with-gibsonai/connect-gibsonai
 - section: Platform
   items:
     - title: Use cases

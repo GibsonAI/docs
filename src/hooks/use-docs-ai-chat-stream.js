@@ -29,6 +29,7 @@ const useDocsAIChatStream = ({ isMountedRef, signal }) => {
         setIsAnswerGenerating(true);
         const reader = response.body.getReader();
         while (isMountedRef?.current) {
+          // eslint-disable-next-line no-await-in-loop
           const { done, value } = await reader.read();
           if (done) break;
 
@@ -88,7 +89,6 @@ const useDocsAIChatStream = ({ isMountedRef, signal }) => {
         throw Error('Something went wrong. Please try again!');
       }
     } catch (error) {
-      console.error(error);
       if (error.name === 'AbortError') return;
       setError(error?.message || error || 'Something went wrong. Please try again!');
     } finally {

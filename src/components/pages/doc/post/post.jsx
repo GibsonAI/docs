@@ -7,7 +7,6 @@ import Aside from 'components/pages/doc/aside';
 import Breadcrumbs from 'components/pages/doc/breadcrumbs';
 import Modal from 'components/pages/doc/modal';
 import MODALS from 'components/pages/doc/modal/data';
-import ChangelogForm from 'components/shared/changelog-form';
 import Content from 'components/shared/content';
 import DocFooter from 'components/shared/doc-footer';
 import NavigationLinks from 'components/shared/navigation-links';
@@ -18,7 +17,7 @@ import Tag from '../tag';
 const Changelog = ({ posts }) => (
   <>
     <Hero />
-    <ChangelogForm className="mb-5 hidden xl:flex" />
+    
     <ChangelogList className="mt-4" posts={posts} />
   </>
 );

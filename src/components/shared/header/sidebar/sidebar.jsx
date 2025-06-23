@@ -1,28 +1,19 @@
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { Suspense } from 'react';
 
-import Button from 'components/shared/button';
-import GithubStarCounter from 'components/shared/github-star-counter';
+
+
+
 import Link from 'components/shared/link';
 import LINKS from 'constants/links';
 import DiscordIcon from 'icons/discord.inline.svg';
-import { getGithubStars } from 'utils/get-github-data';
+
 
 const themePropTypes = {
   isDarkTheme: PropTypes.bool,
 };
 
-const GithubStars = async ({ isDarkTheme }) => {
-  const starsCount = await getGithubStars();
-  return (
-    <Suspense>
-      <GithubStarCounter isDarkTheme={isDarkTheme} starsCount={starsCount} tagName="Header" />
-    </Suspense>
-  );
-};
 
-GithubStars.propTypes = themePropTypes;
 
 const Sidebar = ({ isDarkTheme, isClient, className }) => (
   <div className={clsx('flex items-center gap-x-6 lg:hidden', className)}>
@@ -41,33 +32,8 @@ const Sidebar = ({ isDarkTheme, isClient, className }) => (
       <DiscordIcon width={18} height={18} />
       <span className="text-sm leading-none tracking-extra-tight">Discord</span>
     </Link>
-    {!isClient && <GithubStars isDarkTheme={isDarkTheme} />}
-    <div className="flex gap-2.5 lg:hidden">
-      <Button
-        className={clsx(
-          'px-4.5 whitespace-nowrap border font-semibold',
-          isDarkTheme
-            ? 'border-gray-new-30 text-white hover:border-gray-new-40'
-            : 'border-gray-new-70 hover:border-gray-new-50 dark:border-gray-new-30 dark:hover:border-gray-new-40'
-        )}
-        to={LINKS.login}
-        size="xxs"
-        tagName="Header"
-        analyticsEvent="header_sign_up_clicked"
-      >
-        Log In
-      </Button>
-      <Button
-        className="px-4.5 whitespace-nowrap font-semibold"
-        to={LINKS.signup}
-        theme="primary"
-        size="xxs"
-        tagName="Header"
-        analyticsEvent="header_sign_up_clicked"
-      >
-        Sign Up
-      </Button>
-    </div>
+    
+    
   </div>
 );
 

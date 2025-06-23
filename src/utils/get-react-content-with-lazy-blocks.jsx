@@ -5,93 +5,97 @@ import isBoolean from 'lodash.isboolean';
 import isEmpty from 'lodash.isempty';
 import Image from 'next/image';
 
-import EmbedTweet from 'components/shared/embed-tweet';
+
 import Link from 'components/shared/link';
 
 import AnchorHeading from '../components/shared/anchor-heading';
 import ImageZoom from '../components/shared/image-zoom';
 
-function isBooleanString(string) {
-  return string === 'true' || string === 'false';
-}
-
-function isJSON(string) {
-  if (typeof string !== 'string') return false;
-  if (isBooleanString(string)) return false;
-
-  try {
-    JSON.parse(string);
-  } catch (error) {
-    return false;
-  }
-
-  return true;
-}
-
-function toCamelCase(string) {
-  return string.replace(/([-_][a-z])/g, (group) =>
-    group.toUpperCase().replace('-', '').replace('_', '')
-  );
-}
-
-function transformValue(value) {
-  if (isJSON(value)) {
-    const parsedJSON = JSON.parse(value);
-
-    if (Array.isArray(parsedJSON)) return parsedJSON.map((item) => transformProps(item));
-    if (typeof parsedJSON === 'object' && parsedJSON !== null) return transformProps(parsedJSON);
-
-    return parsedJSON;
-  }
-
-  if (Array.isArray(value)) return value.map((item) => transformProps(item));
-  if (typeof value === 'object' && value !== null) return transformProps(value);
-
-  if (isBooleanString(value)) return value === 'true';
-
-  return value;
-}
-
-function transformProps(props) {
-  const transformedProps = {};
-
-  Object.keys(props).forEach((propName) => {
-    const transformedValue = transformValue(props[propName]);
-    if (!transformedValue && isEmpty(transformedValue) && !isBoolean(transformedValue)) return;
-    transformedProps[toCamelCase(propName)] = transformedValue;
-  });
-
-  return transformedProps;
-}
-
-const sharedComponents = {
-  h2: AnchorHeading('h2'),
-  img: (props) => {
-    const { src, className, width, height, alt, isPriority } = props;
-    const urlWithoutSize = src.replace(/-\d+x\d+/i, '');
-
-    return (
-      <ImageZoom src={urlWithoutSize} isDark>
-        <Image
-          className={clsx('rounded-md', className)}
-          src={urlWithoutSize}
-          width={width || 975}
-          height={height || 512}
-          quality={85}
-          alt={alt || 'Post image'}
-          priority={isPriority || false}
-          sizes="(max-width: 767px) 100vw"
-        />
-      </ImageZoom>
-    );
-  },
-  a: (props) => {
-    const { href, ...otherProps } = props;
-    return <Link to={href} {...otherProps} />;
-  },
-};
-
 export default function getReactContentWithLazyBlocks(content, pageComponents, includeBaseTags) {
+  function isBooleanString(string) {
+    return string === 'true' || string === 'false';
+  }
+
+  function isJSON(string) {
+    if (typeof string !== 'string') return false;
+    if (isBooleanString(string)) return false;
+
+    try {
+      JSON.parse(string);
+    } catch (error) {
+      return false;
+    }
+
+    return true;
+  }
+
+  function toCamelCase(string) {
+    return string.replace(/([-_][a-z])/g, (group) =>
+      group.toUpperCase().replace('-', '').replace('_', '')
+    );
+  }
+
+  let transformValue;
+
+  function transformProps(props) {
+    const transformedProps = {};
+
+    Object.keys(props).forEach((propName) => {
+      const transformedValue = transformValue(props[propName]);
+      if (!transformedValue && isEmpty(transformedValue) && !isBoolean(transformedValue)) return;
+      transformedProps[toCamelCase(propName)] = transformedValue;
+    });
+
+    return transformedProps;
+  }
+
+  transformValue = (value) => {
+    if (isJSON(value)) {
+      const parsedJSON = JSON.parse(value);
+
+      if (Array.isArray(parsedJSON)) return parsedJSON.map((item) => transformProps(item));
+      if (typeof parsedJSON === 'object' && parsedJSON !== null) {
+        return transformProps(parsedJSON);
+      }
+
+      return parsedJSON;
+    }
+
+    if (Array.isArray(value)) return value.map((item) => transformProps(item));
+    if (typeof value === 'object' && value !== null) return transformProps(value);
+
+    if (isBooleanString(value)) return value === 'true';
+
+    return value;
+  };
+
+  const sharedComponents = {
+    h2: AnchorHeading('h2'),
+    img: (props) => {
+      const { src, className, width, height, alt, isPriority } = props;
+      const urlWithoutSize = src.replace(/-\d+x\d+/i, '');
+
+      return (
+        <ImageZoom src={urlWithoutSize} isDark>
+          <Image
+            className={clsx('rounded-md', className)}
+            src={urlWithoutSize}
+            width={width || 975}
+            height={height || 512}
+            quality={85}
+            alt={alt || 'Post image'}
+            priority={isPriority || false}
+            sizes="(max-width: 767px) 100vw"
+          />
+        </ImageZoom>
+      );
+    },
+    a: (props) => {
+      const { href, ...otherProps } = props;
+      return <Link to={href} {...otherProps} />;
+    },
+  };
+
   if (content === null || content === undefined) {
     return null;
   }
@@ -121,7 +125,7 @@ export default function getReactContentWithLazyBlocks(content, pageComponents, i
             domNode.children[0].type === 'tag' ? domNode.children[0] : domNode.children[1];
 
           const Component = components[element.name];
-          if (!Component) return <></>;
+          if (!Component) return null;
 
           const props = transformProps(attributesToProps(element.attribs));
 
@@ -133,7 +137,7 @@ export default function getReactContentWithLazyBlocks(content, pageComponents, i
             domNode.children[0].type === 'tag' ? domNode.children[0] : domNode.children[1];
           const Component = components[element.name];
 
-          if (!Component) return <></>;
+          if (!Component) return null;
 
           if (domNode.children[0].name === 'img') {
             const isPriority = isFirstImage;
@@ -188,20 +192,6 @@ export default function getReactContentWithLazyBlocks(content, pageComponents, i
           }
         }
 
-        if (domNode.attribs?.class?.includes('wp-block-embed-twitter')) {
-          const props = transformProps(attributesToProps(domNode.attribs));
-
-          const { children } = domNode.children[0];
-
-          children.forEach((child) => {
-            if (child.type === 'tag' && child.name === 'blockquote') {
-              child.attribs['data-theme'] = 'dark';
-            }
-          });
-
-          return <EmbedTweet {...props}>{domToReact(children)}</EmbedTweet>;
-        }
-
         if (domNode.attribs?.class?.includes('wp-block-heading')) {
           return AnchorHeading(domNode.name)({
             children: domToReact(domNode.children),
@@ -215,12 +205,15 @@ export default function getReactContentWithLazyBlocks(content, pageComponents, i
           return (
             <video {...props} crossOrigin="anonymous">
               {children}
+              {/* The track element is required for accessibility but will not display without a valid src. */}
+              <track kind="captions" />
             </video>
           );
         }
 
-        if (!includeBaseTags) return <></>;
+        if (!includeBaseTags) return null;
       }
+      return undefined;
     },
   });
 }

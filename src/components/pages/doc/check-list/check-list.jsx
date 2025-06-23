@@ -57,7 +57,7 @@ const CheckList = ({ title, children }) => {
   return (
     <div
       className={clsx(
-        'checklist doc-cta !mt-10 flex flex-col rounded-lg px-8 py-6',
+        'checklist !mt-10 flex flex-col rounded-lg border border-gray-new-90 bg-gray-new-94 px-8 py-6 dark:border-gray-new-20 dark:bg-gray-new-15',
         'border border-gray-new-90 bg-[linear-gradient(to_right,#FAFAFA,transparent)] ',
         'dark:border-gray-new-20 dark:bg-[linear-gradient(to_right,#18191B_30%,#131415_75%)]',
         'xl:!mt-8 lg:px-6 lg:py-5 md:p-5 md:px-5 md:py-[18px]'

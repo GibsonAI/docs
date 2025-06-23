@@ -12,11 +12,12 @@ export default function getNodeText(node) {
     case 'object': {
       if (node instanceof Array) return node.map(getNodeText).join(' ').trim();
 
-      if ('props' in node) return getNodeText(node.props.children);
+      if ('props'in node) return getNodeText(node.props.children);
+      return '';
     }
 
     default:
-      console.warn('Unresolved `node` of type:', typeof node, node);
+
       return '';
   }
 }

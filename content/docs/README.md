@@ -428,29 +428,6 @@ Information about features that are coming soon.
 
 </details>
 
-## CTA
-
-This is a simple block with title, description text and one CTA button that accomplish certain actions.
-
-```md
-<CTA />
-```
-
-Check the example for default data of CTA block
-
-<details>
-<summary>Example</summary>
-
-![CTA example](images/cta-example.jpg)
-
-</details>
-
-To change text in CTA block, you can pass to the component props `title`, `description`, `buttonText`, `buttonUrl`:
-
-```md
-<CTA title="Try it on GibsonAI!" description="GibsonAI is Serverless Postgres built for the cloud. Explore Postgres features and functions in our user-friendly SQL Editor. Sign up for a free account to get started." buttonText="Sign Up" buttonUrl="https://console.gibsonai.com/signup" />
-```
-
 ## Steps
 
 To display numbered steps, wrap the content with `Steps` component.  
@@ -599,22 +576,6 @@ Another term for smoke test
 ![Definition list example](images/definition-list-example.jpg)
 
 </details>
-
-## Detail Icon Cards
-
-`DetailIconCards` is a custom MDX component that displays data in a card format. Each card contains icon, title, href and description. This layout is especially useful for presenting grouped information in a visually pleasing and easy-to-understand way.
-
-```md
-<DetailIconCards>
-
-<a href="https://api-docs.gibsonai.com/reference/getting-started-with-gibsonai-api" description="Collaborate on open-source projects" icon="github">Headless vector search</a>
-
-<a href="https://api-docs.gibsonai.com/reference/getting-started-with-gibsonai-api" description="Collaborate on open-source projects" icon="github">Open AI completions</a>
-
-</DetailIconCards>
-```
-
-List of available icons in folder: /website/src/components/pages/doc/detail-icon-cards/images
 
 ## Shared MDX components
 

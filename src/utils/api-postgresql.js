@@ -37,16 +37,18 @@ const getAllPosts = async () => {
   const slugs = await getPostSlugs(POSTGRESQL_DIR_PATH);
   return slugs
     .map((slug) => {
-      if (!getPostBySlug(slug, POSTGRESQL_DIR_PATH)) return;
-      const data = getPostBySlug(slug, POSTGRESQL_DIR_PATH);
-
-      const slugWithoutFirstSlash = slug.slice(1);
+      const post = getPostBySlug(slug, POSTGRESQL_DIR_PATH);
+      if (!post) {
+        return null;
+      }
       const {
         data: { title, subtitle, isDraft, redirectFrom },
         content,
-      } = data;
+      } = post;
+      const slugWithoutFirstSlash = slug.slice(1);
       return { slug: slugWithoutFirstSlash, title, subtitle, isDraft, content, redirectFrom };
     })
+    .filter(Boolean)
     .filter((item) => process.env.NEXT_PUBLIC_VERCEL_ENV !== 'production' || !item.isDraft);
 };
 

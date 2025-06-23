@@ -13,7 +13,7 @@ const matter = require('gray-matter');
 //   auth: process.env.GITHUB_TOKEN,
 // });
 // async function getLastUpdateDate(filePath) {
-//   const repoOwner = 'neondatabase';
+//   const repoOwner = 'gibsondatabase';
 //   const repoName = 'website';
 //   const res = await octokit.request('GET /repos/{owner}/{repo}/commits', {
 //     owner: repoOwner,
@@ -68,4 +68,4 @@ const updateFrontmatter = async () => {
 
 updateFrontmatter();
 
-console.log('Frontmatter updated');
+

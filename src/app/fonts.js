@@ -8,12 +8,12 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-const esbuild = localFont({
+/* const esbuild = localFont({
   src: '../fonts/esbuild/ESBuild-Medium.woff2',
   weight: '500',
   style: 'normal',
   display: 'swap',
   variable: '--font-esbuild',
-});
+}); */
 
-export { inter, esbuild };
+export default inter;

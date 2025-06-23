@@ -42,7 +42,7 @@ const themes = {
 };
 
 const Admonition = ({ children = null, type = 'note', title = null, asHTML = false }) => {
-  const typeText = type == 'comingSoon' ? 'Coming soon' : type;
+  const typeText = type === 'comingSoon' ? 'Coming soon' : type;
   const theme = themes[type] || themes.note;
   const Icon = theme.icon;
 

@@ -169,10 +169,10 @@ const Menu = ({
   return (
     <div
       className={clsx(
-        depth === 0 ? '' : 'pl-4',
-
-        'lg:px-8 lg:pt-4 md:px-5',
-        (isActive || isRootMenu) && 'opacity-100'
+        depth === 0 ? '' : 'pl-2',
+        'lg:px-2 lg:pt-4 md:px-2',
+        (isActive || isRootMenu) && 'opacity-100',
+        'w-full'
       )}
       ref={menuRef}
     >

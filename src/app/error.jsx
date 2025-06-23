@@ -3,12 +3,10 @@
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 
-import Hero from 'components/pages/error/hero';
 import Layout from 'components/shared/layout';
-import SEO_DATA from 'constants/seo-data';
 
-/* 
-  NOTE: 
+/*
+  NOTE:
   This page is needed to handle unexpected errors and display fallback UI.
 */
 const ErrorPage = ({ error, reset }) => {
@@ -19,14 +17,24 @@ const ErrorPage = ({ error, reset }) => {
 
   return (
     <>
-      <title>{SEO_DATA.error.title}</title>
-
+      <title>Error | GibsonAI Docs</title>
       <Layout isClient>
-        <Hero
-          title="Page is broken..."
-          text="Sorry, the page you are looking for is broken. Please try again later, we'll fix it soon!"
-          reset={reset}
-        />
+        <div className="flex grow items-center justify-center">
+          <div className="text-center">
+            <h1 className="font-title text-4xl font-bold">Something went wrong...</h1>
+            <p className="mt-4 text-lg">
+              Sorry, the page you are looking for is broken. Please try again later, we&apos;ll fix
+              it soon!
+            </p>
+            <button
+              className="mt-4 rounded bg-green-400 px-4 py-2 font-bold text-white hover:bg-green-500"
+              type="button"
+              onClick={reset}
+            >
+              Try again
+            </button>
+          </div>
+        </div>
       </Layout>
     </>
   );

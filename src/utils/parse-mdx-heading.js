@@ -1,6 +1,6 @@
 function parseMDXHeading(line) {
   if (typeof line !== 'string') {
-    console.error('Invalid input to parseMDXHeading:', line);
+
     return [];
   }
 

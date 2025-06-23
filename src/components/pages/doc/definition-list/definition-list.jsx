@@ -3,6 +3,13 @@ import React, { Fragment } from 'react';
 import slugify from 'slugify';
 
 import AnchorIcon from 'icons/anchor.inline.svg';
+
+const bulletIcons = {
+  dash: '—',
+  check: '✓',
+  x: '✗',
+};
+
 // local constants
 const termDelimiterRegEx = /\n/;
 const listDelimiterRegEx = /\n:/;
@@ -89,9 +96,7 @@ const DefinitionList = ({ bulletType = 'dash', children }) => {
                   id={!termIdx ? anchorMold : termIdx}
                   key={termIdx}
                 >
-                  <span className="mr-2.5">
-                    {bulletType === 'dash' ? '—' : bulletType === 'check' ? '✓' : '✗'}
-                  </span>
+                  <span className="mr-2.5">{bulletIcons[bulletType]}</span>
                   {term}
                   {!termIdx && (
                     <a

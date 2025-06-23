@@ -27,7 +27,7 @@ const parseHighlightLines = (meta) => {
         const range = item.split('-');
         const start = parseInt(range[0], 10);
         const end = parseInt(range[1], 10);
-        for (let i = start; i <= end; i++) {
+        for (let i = start; i <= end; i += 1) {
           result.push(i);
         }
       } else {
@@ -61,12 +61,15 @@ export default async function highlight(code, lang = 'bash', meta = '', theme = 
     transformers: [
       {
         pre(node) {
+          // eslint-disable-next-line no-param-reassign
           node.properties['data-language'] = language;
         },
         code(node) {
+          // eslint-disable-next-line no-param-reassign
           node.properties.class = 'grid';
         },
         line(node, line) {
+          // eslint-disable-next-line no-param-reassign
           node.properties['data-line'] = line;
 
           if (meta) {
@@ -74,6 +77,7 @@ export default async function highlight(code, lang = 'bash', meta = '', theme = 
 
             highlightedLines.forEach((item) => {
               if (item === line) {
+                // eslint-disable-next-line no-param-reassign
                 node.properties['data-highlighted-line'] = true;
               }
             });
@@ -110,7 +114,9 @@ export const getHighlightedCodeArray = async (items) => {
       })
     );
   } catch (error) {
-    console.error('Error highlighting code:', error);
+    // We are silencing the error here intentionally.
+    // If the code highlighting fails, we want to return an empty array
+    // and let the UI handle it gracefully instead of crashing the page.
   }
 
   return highlightedItems;

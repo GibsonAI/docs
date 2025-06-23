@@ -6,7 +6,6 @@ const useAbortController = () => {
   const getSignal = () => abortControllerRef.current.signal;
 
   const resetAbortController = () => {
-    console.log('resetting');
     abortControllerRef.current.abort();
     abortControllerRef.current = new AbortController();
   };

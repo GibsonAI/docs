@@ -155,7 +155,15 @@ const defaultConfig = {
     ];
   },
   async rewrites() {
-    return [];
+    // Allow legacy '/docs/...' URLs to work by internally routing them to
+    // the new app-router catch-all located at '/[...slug]'. This keeps all
+    // existing inbound links valid in both dev and prod.
+    return [
+      {
+        source: '/docs/:path*',
+        destination: '/:path*',
+      },
+    ];
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'));

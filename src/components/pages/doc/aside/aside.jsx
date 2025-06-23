@@ -2,8 +2,6 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import Actions from 'components/pages/doc/actions';
-import ChatOptions from 'components/pages/doc/chat-options';
-import ChangelogForm from 'components/shared/changelog-form';
 import TableOfContents from 'components/shared/table-of-contents';
 
 const Aside = ({

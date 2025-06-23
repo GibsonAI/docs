@@ -52,10 +52,10 @@ const Item = ({
   };
 
   return (
-    <li className="group/item flex flex-col">
+    <li className="group/item flex flex-col w-full">
       <LinkTag
         className={clsx(
-          'group flex w-full gap-2 py-1.5 text-left text-sm leading-tight tracking-extra-tight transition-colors duration-200 md:py-[7px]',
+          'group flex w-full gap-1.5 py-1 text-left text-sm leading-tight tracking-extra-tight transition-colors duration-200 md:py-[6px] overflow-visible',
           currentSlug === slug
             ? 'font-medium text-black-new dark:text-white'
             : 'font-normal text-gray-new-40 hover:text-black-new dark:text-gray-new-80 dark:hover:text-white'
@@ -68,7 +68,7 @@ const Item = ({
       >
         {ariaLabel && <span className="sr-only">{ariaLabel}</span>}
         {icon && <Icon title={icon} className="size-4.5 shrink-0" />}
-        <span className="text-pretty" aria-hidden={!!ariaLabel}>
+        <span className="text-pretty break-words w-full" aria-hidden={!!ariaLabel}>
           {title}&nbsp;
           {tag && <Tag className="relative -top-px ml-1 inline-block" label={tag} size="sm" />}
         </span>

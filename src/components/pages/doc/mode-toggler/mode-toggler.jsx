@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { PropTypes } from 'prop-types';
 
-import GradientBorder from 'components/shared/gradient-border';
+
 import Link from 'components/shared/link';
 import LINKS from 'constants/links';
 import useLocalStorage from 'hooks/use-local-storage';
@@ -29,9 +29,7 @@ const ToggleButton = ({ src, title, isActive, onClick }) => (
     onClick={onClick}
   >
     {title}
-    {isActive && (
-      <GradientBorder className="border-image-header-docs-button-border dark:border-image-header-docs-button-border-dark" />
-    )}
+    
   </Link>
 );
 
@@ -62,7 +60,7 @@ const ModeToggler = ({ className, isAiChatPage }) => {
       />
       {/* <ToggleButton
         src={LINKS.aiChat}
-        title="Ask Neon AI"
+        title="Ask Gibson AI"
         isActive={isAiChatPage}
         onClick={() => setPreviousPage(pathname)}
       /> */}

@@ -17,7 +17,7 @@ import Link from '../link';
 import CheckIcon from './images/check.inline.svg';
 import DownloadIcon from './images/download.inline.svg';
 import FileIcon from './images/file.inline.svg';
-import NeonIcon from './images/neon.inline.svg';
+import GibsonIcon from './images/gibson.inline.svg';
 
 const copySvgToClipboard = async () => {
   try {
@@ -25,7 +25,7 @@ const copySvgToClipboard = async () => {
     const svgContent = await response.text();
     copyToClipboard(svgContent);
   } catch (error) {
-    console.error('Failed to copy SVG content: ', error);
+    // Failed to copy SVG content
   }
 };
 
@@ -37,7 +37,7 @@ const data = [
   // {
   //   icon: DownloadIcon,
   //   name: 'Download logo pack',
-  //   url: '/brand/neon-brand-assets.zip',
+  //   url: '/brand/gibson-brand-assets.zip',
   // },
   // {
   //   icon: FileIcon,
@@ -70,7 +70,7 @@ const Logo = ({
   return (
     <div className="relative shrink-0">
       <Link to="https://www.gibsonai.com/" onContextMenu={isHeader ? handleContextMenu : undefined}>
-        <span className="sr-only">Neon</span>
+        <span className="sr-only">Gibson</span>
         {isDarkTheme ? (
           <Image
             className={clsx(className)}

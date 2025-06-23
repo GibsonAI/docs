@@ -104,4 +104,3 @@ GibsonAI is not just for starting projects — it’s built to support you acros
 
 Initially, you'll be signed up for GibsonAI's [Free Plan](https://www.gibsonai.com/pricing), but you can easily upgrade to one of our [paid plans](https://www.gibsonai.com/pricing) when you're ready.
 
-<CTA title="Are you ready?" description="After signing up, remember to join our active Discord community, where you'll find GibsonAI users and team members ready to help." buttonText="Sign up" buttonUrl="https://app.gibsonai.com/signup" />

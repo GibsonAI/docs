@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Content from 'components/shared/content';
 import Link from 'components/shared/link';
-import ScrollLoader from 'components/shared/scroll-loader';
 import generateChangelogPath from 'utils/generate-changelog-path';
 import getFormattedDate from 'utils/get-formatted-date';
 
@@ -41,16 +40,9 @@ const ChangelogPost = (post) => {
 
 const ChangelogList = ({ className, posts }) => (
   <div className={clsx('sm:space-y-7', className)}>
-    {posts.slice(0, 3).map((item) => (
+    {posts.map((item) => (
       <ChangelogPost key={item.slug} {...item} />
     ))}
-    {posts.length > 3 && (
-      <ScrollLoader className={clsx('sm:space-y-7', className)} itemsCount={3}>
-        {posts.slice(3).map((item) => (
-          <ChangelogPost key={item.slug} {...item} />
-        ))}
-      </ScrollLoader>
-    )}
   </div>
 );
 

@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import PropTypes from 'prop-types';
 import { useState, useRef, useEffect } from 'react';
 
-import InkeepTrigger from 'components/shared/inkeep-trigger';
 import Link from 'components/shared/link';
 import Logo from 'components/shared/logo';
 import { HOME_MENU_ITEM } from 'constants/docs';
@@ -34,6 +33,7 @@ const checkSlugInActiveMenu = (currentSlug, activeMenuList, items) => {
 // supports duplicates section in sidebar,
 // but only the first one will be active
 export const getActiveItems = (items, currentSlug, result = [], parents = []) => {
+  if (!items || !Array.isArray(items) || items.length === 0) return [];
   const activeItem = items.find((item) => item.slug === currentSlug);
   if (activeItem) {
     if (activeItem.items && !activeItem.section) {
@@ -79,12 +79,12 @@ const Sidebar = ({ className = null, sidebar, slug, basePath, customType, docPag
   return (
     <aside
       className={clsx(
-        'relative left-0 z-40 border-r border-gray-new-94 bg-white dark:border-gray-new-10 dark:bg-black-pure',
+        'relative left-0 z-40 border-r border-gray-new-94 bg-white dark:border-gray-new-10 dark:bg-black-pure min-w-[280px] md:min-w-[300px]',
         className
       )}
     >
       <div className="sticky top-0 pt-[18px]">
-        <div className="flex items-center gap-x-7 pl-[52px] pr-6 xl:pl-8">
+        <div className="flex items-center gap-x-7 pl-6 pr-4 xl:pl-6">
           <Logo className="h-7" width={102} height={28} priority isHeader />
           <Link
             className="relative text-[15px] font-medium leading-none tracking-extra-tight text-gray-new-60 transition-colors duration-200 before:absolute before:inset-y-0 before:-left-3.5 before:h-full before:w-px before:bg-gray-new-80 hover:text-black-new dark:text-gray-new-60 before:dark:bg-gray-new-20 dark:hover:text-white"
@@ -93,17 +93,18 @@ const Sidebar = ({ className = null, sidebar, slug, basePath, customType, docPag
             {customType?.title || 'Docs'}
           </Link>
         </div>
-        <div className="mt-[54px] px-[52px] xl:px-8">
-          <InkeepTrigger docPageType={docPageType} />
+        <div className="mt-[54px] px-4 xl:px-6 md:px-4 lg:px-6">
+          
           <div
             className={clsx(
               'relative',
               'after:pointer-events-none after:absolute after:inset-x-0 after:top-0 after:h-10',
-              'after:bg-gradient-to-b after:from-white after:to-transparent after:dark:from-black-pure after:dark:to-transparent'
+              'after:bg-gradient-to-b after:from-white after:to-transparent after:dark:from-black-pure after:dark:to-transparent',
+              'w-full'
             )}
           >
             <nav
-              className="no-scrollbars z-10 h-[calc(100vh-166px)] overflow-y-scroll py-8"
+              className="no-scrollbars z-10 h-[calc(100vh-166px)] overflow-y-auto py-8 w-full"
               ref={menuWrapperRef}
             >
               <div className="relative w-full">

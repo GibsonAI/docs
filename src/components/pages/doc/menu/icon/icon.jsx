@@ -20,13 +20,13 @@ import FeaturesIcon from 'icons/docs/sidebar/features.inline.svg';
 import FeedsIcon from 'icons/docs/sidebar/feeds.inline.svg';
 import FrameworksIcon from 'icons/docs/sidebar/frameworks.inline.svg';
 import GetStartedIcon from 'icons/docs/sidebar/get-started.inline.svg';
+import GibsonTwin from 'icons/docs/sidebar/gibson-twin.inline.svg';
 import GlossaryIcon from 'icons/docs/sidebar/glossary.inline.svg';
 import HomeIcon from 'icons/docs/sidebar/home.inline.svg';
 import ImportIcon from 'icons/docs/sidebar/import.inline.svg';
 import IntegrationsIcon from 'icons/docs/sidebar/integrations.inline.svg';
 import LanguagesIcon from 'icons/docs/sidebar/languages.inline.svg';
 import LockIcon from 'icons/docs/sidebar/lock.inline.svg';
-import NeonTwin from 'icons/docs/sidebar/neon-twin.inline.svg';
 import OrmIcon from 'icons/docs/sidebar/orm.inline.svg';
 import PartnerGuideIcon from 'icons/docs/sidebar/partner-guide.inline.svg';
 import PlatformIcon from 'icons/docs/sidebar/platform.inline.svg';
@@ -48,13 +48,13 @@ import TutorialIcon from 'icons/docs/sidebar/tutorial.inline.svg';
 import UpgradeIcon from 'icons/docs/sidebar/upgrade.inline.svg';
 import UseCaseIcon from 'icons/docs/sidebar/use-case.inline.svg';
 import VersionIcon from 'icons/docs/sidebar/version.inline.svg';
-import WhyNeonIcon from 'icons/docs/sidebar/why-neon.inline.svg';
+import WhyGibsonIcon from 'icons/docs/sidebar/why-gibson.inline.svg';
 import WorkflowsIcon from 'icons/docs/sidebar/workflows.inline.svg';
 
 const icons = {
+  ai: AiIcon,
   'ai-agent': AiAgentIcon,
   anonymize: AnonymizeIcon,
-  ai: AiIcon,
   api: ApiIcon,
   architecture: ArchitectureIcon,
   auth: AuthIcon,
@@ -72,13 +72,13 @@ const icons = {
   feeds: FeedsIcon,
   frameworks: FrameworksIcon,
   'get-started': GetStartedIcon,
+  'gibson-twin': GibsonTwin,
   glossary: GlossaryIcon,
   home: HomeIcon,
   import: ImportIcon,
   integrations: IntegrationsIcon,
   languages: LanguagesIcon,
   lock: LockIcon,
-  'neon-twin': NeonTwin,
   orm: OrmIcon,
   'partner-guide': PartnerGuideIcon,
   platform: PlatformIcon,
@@ -100,7 +100,7 @@ const icons = {
   upgrade: UpgradeIcon,
   'use-case': UseCaseIcon,
   version: VersionIcon,
-  'why-neon': WhyNeonIcon,
+  'why-gibson': WhyGibsonIcon,
   workflows: WorkflowsIcon,
 };
 

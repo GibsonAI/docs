@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-import GradientBorder from 'components/shared/gradient-border';
+
 import Link from 'components/shared/link';
 
 import bannerDesktop from './images/banner-desktop.jpg';
@@ -37,7 +37,7 @@ const MenuBanner = ({ title, description, to }) => (
         </p>
       </div>
 
-      <GradientBorder className="!rounded-[11px]" withBlend />
+      
     </Link>
   </li>
 );
