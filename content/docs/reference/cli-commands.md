@@ -153,26 +153,31 @@ gibson conf code::custom::path project.model.MyBaseModel
 ## Code Generation Commands
 
 - Write base code:
+
   ```bash
   gibson code base
   ```
 
 - Single model:
+
   ```bash
   gibson code model [entity name]
   ```
 
 - Single schema:
+
   ```bash
   gibson code schema [entity name]
   ```
 
 - All models:
+
   ```bash
   gibson code models
   ```
 
 - All schemas:
+
   ```bash
   gibson code schemas
   ```
@@ -217,16 +222,19 @@ gibson merge
 ## Forgetting Things from Memory
 
 - Forget stored:
+
   ```bash
   gibson forget stored
   ```
 
 - Forget last:
+
   ```bash
   gibson forget last
   ```
 
 - Forget all:
+
   ```bash
   gibson forget all
   ```

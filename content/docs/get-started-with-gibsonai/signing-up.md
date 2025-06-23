@@ -1,5 +1,5 @@
 ---
-title: Playing with GibsonAI
+title: Getting started with GibsonAI
 subtitle: Sign up for free and learn the basics of working with GibsonAI
 enableTableOfContents: true
 redirectFrom:
@@ -34,13 +34,12 @@ This tutorial walks you through creating your first database schema, exploring y
 GibsonAI uses prompts to help you define your database schema without writing SQL.
 
 1. Type your schema idea in plain English. For example:
-    
+
     > “Create a schema with users, destinations, bookings, and reviews. Each user can make bookings and leave reviews. Each destination has a name, description, price, and rating.”
-    > 
+    >
 2. Click **Generate Schema**
-    
+
     GibsonAI will create your schema instantly using the prompt you entered.
-    
 
 ---
 
@@ -64,7 +63,7 @@ Now it's time to deploy your schema to a real database.
 4. Gibson will provision a real serverless database, provides connection details and generates ready to use Data API for CRUD operations.
 
 > Currently, GibsonAI supports MySQL database deployment. You can also connect to your existing MySQL database to import existing schemas.
-> 
+>
 
 ---
 
@@ -89,9 +88,9 @@ Let’s say you want to add an `address` column to the `user` table.
 
 1. Open the prompt bar
 2. Type:
-    
+
     > “Add an address column to the user table”
-    > 
+    >
 3. GibsonAI updates the schema and shows the diff
 
 Gibson will automatically:

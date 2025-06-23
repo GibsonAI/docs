@@ -11,7 +11,7 @@ One prompt to build a database schema with GibsonAI.
 
 <DetailIconCards withNumbers>
 
-<a href="/docs/get-started-with-gibsonai/signing-up" description="Sign up for free and learn the basics of working with GibsonAI">Playing with GibsonAI</a>
+<a href="/docs/get-started-with-gibsonai/signing-up" description="Sign up for free and learn the basics of working with GibsonAI">Getting started with GibsonAI</a>
 
 <a href="/docs/get-started-with-gibsonai/connect-gibsonai" description="Connect GibsonAI to the platform, language, and other tools in your tech stack">Connect GibsonAI to your stack</a>
 

@@ -12,6 +12,7 @@ Getting started with GibsonAI is simple and secure with Gmail authentication. Fo
 <Steps>
 
 ## Visit the Homepage
+
 Go to [app.gibsonai.com](https://app.gibsonai.com) and click **Sign Up**.
 
 ## Sign up with Google or Email
@@ -24,10 +25,12 @@ Go to [app.gibsonai.com](https://app.gibsonai.com) and click **Sign Up**.
 - Allow GibsonAI to access your basic profile information (like name and email) to complete the signup.
 
 ### Sign up with Email
+
 - Enter your email address and click **Send magic link**.
 - Check your inbox for an email with a secure login link.
 
 ## Automatic Account Creation
+
 Once you're authenticated, your GibsonAI account is automatically created and you'll be redirected to your dashboard.
 
 </Steps>
@@ -37,6 +40,7 @@ Once you're authenticated, your GibsonAI account is automatically created and yo
 <Steps>
 
 ## Go to the Sign-In Page
+
 - On the homepage, click **Sign In**.
 
 ## Log in with Google or Email
@@ -47,12 +51,12 @@ Once you're authenticated, your GibsonAI account is automatically created and yo
 - Use your Gmail account to log in if you're not already signed in.
 
 ### Log in with Email
+
 - Enter your email and click **Send magic link**.
 - Use the link in your inbox to sign in securely.
 
 ## Access Your Dashboard
+
 Once you're signed in, you’ll be taken directly to your dashboard. From there, you can start designing, deploying, and managing your production-ready databases.
 
-
 </Steps>
-

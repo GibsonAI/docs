@@ -19,7 +19,6 @@ GibsonAI offers flexible pricing plans to accommodate different project sizes an
 | **Starter**| $20/month    | 20,000              | Unlimited         | Direct DB Access           | Schema & API imports, unlimited projects, database hosting                  |
 | **Pro**    | $50/month    | 50,000              | Unlimited         | Autoscaling DB             | Multiple environments, team collaboration, autoscaling databases            |
 
-
 ## Free Plan
 
 Features:
@@ -34,7 +33,7 @@ Best For:
 
 Enhanced Capabilities:
 
-- 20K additional credits per month. 
+- 20K additional credits per month.
 - Additional credits applied as needed for $10 for 10K credits.
 
 Billing Options:

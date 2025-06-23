@@ -29,7 +29,6 @@ uv tool install gibson-cli@latest
 pip install gibson-cli --upgrade
 ```
 
-
 </TabItem>
 
 </Tabs>

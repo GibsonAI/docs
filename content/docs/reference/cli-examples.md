@@ -110,6 +110,7 @@ gibson q add nickname to sql://user
 ```
 
 Using `sql://` enables GibsonAI to:
+
 - Create new entities
 - Store them in `last` memory
 - Let you generate models/schemas instantly
@@ -117,6 +118,5 @@ Using `sql://` enables GibsonAI to:
 ```bash
 gibson code model user
 ```
-
 
 <NeedHelp/>

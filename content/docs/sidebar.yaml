@@ -7,10 +7,11 @@
     - title: Quickstarts
       icon: get-started
       items:
-          - title: 1 - Playing with GibsonAI
-            slug: get-started-with-gibsonai/signing-up
-          - title: 2 - Connect GibsonAI to your stack
-            slug: get-started-with-gibsonai/connect-gibsonai
+        - title: Getting started with GibsonAI
+          slug: get-started-with-gibsonai/signing-up
+        - title: Connect GibsonAI to your stack
+          slug: get-started-with-gibsonai/connect-gibsonai
+
 - section: Platform
   items:
     - title: Use cases
@@ -29,6 +30,7 @@
     - title: Pricing
       slug: introduction/about-pricing
       icon: billing
+
 - section: Dev tools
   items:
     - title: CLI Reference
@@ -50,6 +52,7 @@
     - title: Example repos
       slug: https://github.com/GibsonAI
       icon: search
+
 - section: Authentication & Access
   items:
     - title: Signup & Sign-In

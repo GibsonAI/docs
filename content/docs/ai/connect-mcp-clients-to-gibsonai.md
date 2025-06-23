@@ -31,8 +31,8 @@ uvx --from gibson-cli@latest gibson auth login
 
 ## Cursor Setup
 
-1. Go to `Cursor` → `Settings` → `Cursor Settings` → `MCP Tools`. 
-2. Click `New MCP Server`. 
+1. Go to `Cursor` → `Settings` → `Cursor Settings` → `MCP Tools`.
+2. Click `New MCP Server`.
 3. Update the configuration to include the following:
 
 ```json
@@ -48,7 +48,7 @@ uvx --from gibson-cli@latest gibson auth login
 
 ## Windsurf Setup
 
-1. Go to `Windsurf` → `Settings` → `Windsurf Settings` → `Cascade`. 
+1. Go to `Windsurf` → `Settings` → `Windsurf Settings` → `Cascade`.
 2. Click `Add server` in the `Model Context Protocol (MCP) Servers` section.
 3. In the modal, click `Add custom server`.
 4. Update the configuration to include the following:
@@ -70,7 +70,7 @@ uvx --from gibson-cli@latest gibson auth login
 
 1. Go to `Claude` → `Settings` → `Developer`.
 2. Click `Edit Config`.
-3. Open the `claude_desktop_config.json` file. 
+3. Open the `claude_desktop_config.json` file.
 4. Update the configuration to include the following:
 
 ```json
@@ -144,6 +144,7 @@ See the official [GitHub Copilot MCP docs](https://docs.github.com/en/copilot/cu
   }
 }
 ```
+
 See the [Claude Desktop MCP docs](https://modelcontextprotocol.io/quickstart/user) for more information.
 
 <NeedHelp/>

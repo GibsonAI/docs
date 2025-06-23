@@ -17,7 +17,7 @@ Working with databases is often repetitive work and slows developers down. The i
 
 ### You start with a manual schema setup
 
-You have to create tables, think through relationships, indexes, data types, and naming. You map tables to objects using ORM libraries and build APIs to access that data. It’s easy to miss things or overcomplicate at an early stage.
+You have to create tables, think through relationships, indexes, data types, and naming. You map tables to objects using ORM libraries and build APIs to access that data. It’s easy to miss things or over-complicate at an early stage.
 
 ### Schema changes are painful
 

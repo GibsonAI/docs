@@ -8,7 +8,7 @@ GibsonAI is built on a modern, scalable infrastructure designed to support dynam
 
 ## Cloud-Native Architecture
 
-GibsonAI runs on a robust cloud platform to ensure high availability and security. 
+GibsonAI runs on a robust cloud platform to ensure high availability and security.
 
 ## Modular Microservices
 
