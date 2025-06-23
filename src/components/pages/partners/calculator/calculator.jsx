@@ -1,6 +1,7 @@
+import UseCaseCalculator from 'components/shared/use-case-calculator';
+
 import Container from 'components/shared/container';
 import GradientLabel from 'components/shared/gradient-label';
-import UseCaseCalculator from 'components/shared/use-case-calculator';
 
 const Calculator = () => (
   <section className="calculator safe-paddings mt-36 lg:mt-20 md:mt-12">
