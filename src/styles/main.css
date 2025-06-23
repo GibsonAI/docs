@@ -1,6 +1,8 @@
 @layer base {
   body {
-    @apply relative min-w-[320px] !overflow-x-hidden bg-white font-sans text-black antialiased dark:bg-black-pure dark:text-white;
+    @apply relative min-w-[320px] !overflow-x-hidden font-sans text-black antialiased;
+    background-color: #091628;
+    color: #fff;
     -webkit-tap-highlight-color: transparent;
   }
 
