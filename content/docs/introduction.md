@@ -11,9 +11,9 @@ One prompt to build a database schema with GibsonAI.
 
 <DetailIconCards withNumbers>
 
-<a href="/docs/get-started-with-gibsonai/signing-up" description="Sign up for free and learn the basics of working with GibsonAI">Getting started with GibsonAI</a>
+<a href="/get-started/signing-up" description="Sign up for free and learn the basics of working with GibsonAI">Getting started with GibsonAI</a>
 
-<a href="/docs/get-started-with-gibsonai/connect-gibsonai" description="Connect GibsonAI to the platform, language, and other tools in your tech stack">Connect GibsonAI to your stack</a>
+<a href="/get-started/connect-gibsonai" description="Connect GibsonAI to the platform, language, and other tools in your tech stack">Connect GibsonAI to your stack</a>
 
 </DetailIconCards>
 
@@ -58,11 +58,11 @@ One prompt to build a database schema with GibsonAI.
 ### Your favorite AI code editor
 
 <DetailIconCards>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#vs-code-github-copilot-setup" description="AI-enhanced database management in Visual Studo Code IDE" icon="openai">VS Code + GitHub Copilot</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#claude-desktop-setup" description="Use natural language to manage your databases with Claude Desktop and GibsonAI MCP server" icon="openai">Claude Desktop</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#cursor-setup" description="AI-enhanced database management in Cursor IDE" icon="openai">Cursor</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#windsurf-setup" description="AI-enhanced database management in Windsurf Editor" icon="openai">Windsurf</a>
-<a href="/docs/ai/connect-mcp-clients-to-gibsonai#cline-vs-code-extension-setup" description="AI-enhanced database management with Cline" icon="openai">Cline</a>
+<a href="/ai/connect-mcp-clients-to-gibsonai#vs-code-github-copilot-setup" description="AI-enhanced database management in Visual Studio Code IDE" icon="openai">VS Code + GitHub Copilot</a>
+<a href="/ai/connect-mcp-clients-to-gibsonai#claude-desktop-setup" description="Use natural language to manage your databases with Claude Desktop and GibsonAI MCP server" icon="openai">Claude Desktop</a>
+<a href="/ai/connect-mcp-clients-to-gibsonai#cursor-setup" description="AI-enhanced database management in Cursor IDE" icon="openai">Cursor</a>
+<a href="/ai/connect-mcp-clients-to-gibsonai#windsurf-setup" description="AI-enhanced database management in Windsurf Editor" icon="openai">Windsurf</a>
+<a href="/ai/connect-mcp-clients-to-gibsonai#cline-vs-code-extension-setup" description="AI-enhanced database management with Cline" icon="openai">Cline</a>
 </DetailIconCards>
 
 ## Join the community

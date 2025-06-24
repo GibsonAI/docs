@@ -2,8 +2,6 @@
 title: Getting started with GibsonAI
 subtitle: Sign up for free and learn the basics of working with GibsonAI
 enableTableOfContents: true
-redirectFrom:
-  - /docs/quickstart/console/
 updatedOn: '2025-04-29T12:43:26.180Z'
 ---
 

@@ -80,10 +80,8 @@ yarn-error.log
 
 .idea/
 .vscode/
-content/docs/shared-content/NewPricing
 public/md
 public/llms.txt
 
-content/docs/guides/time_travel_tutorial_before-1.png
 yarn.lock
 package-lock.json

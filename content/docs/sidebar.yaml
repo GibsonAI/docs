@@ -1,19 +1,20 @@
+- title: Introduction
+  slug: introduction
+  icon: home
+
 - section: Get Started
   items:
     - title: What is GibsonAI?
-      slug: get-started-with-gibsonai/what-gibsonai
-      icon: info
+      slug: get-started/what-is-gibsonai
+      icon: tutorial
 
-    - title: Quickstarts
+    - title: Getting Started
+      slug: get-started/signing-up
       icon: play
-      items:
-        - title: Getting started with GibsonAI
-          slug: get-started-with-gibsonai/signing-up
-          icon: play
 
-        - title: Connect GibsonAI to your stack
-          slug: get-started-with-gibsonai/connect-gibsonai
-          icon: connect
+    - title: Connect GibsonAI to your stack
+      slug: get-started/connect-gibsonai
+      icon: frameworks
 
 - section: Platform
   items:
@@ -33,7 +34,7 @@
           icon: chat
 
     - title: Features
-      slug: guides/gibsonai-features
+      slug: features
       icon: features
 
     - title: Pricing
@@ -79,5 +80,5 @@
 - section: Authentication & Access
   items:
     - title: Signup & Sign-In
-      slug: guides/gibsonai-auth
+      slug: authentication
       icon: auth

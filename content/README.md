@@ -448,7 +448,7 @@ Check the example for default data of CTA block
 To change text in CTA block, you can pass to the component props `title`, `description`, `buttonText`, `buttonUrl`:
 
 ```md
-<CTA title="Try it on GibsonAI!" description="GibsonAI is Serverless Postgres built for the cloud. Explore Postgres features and functions in our user-friendly SQL Editor. Sign up for a free account to get started." buttonText="Sign Up" buttonUrl="https://console.gibsonai.com/signup" />
+<CTA title="Try it on GibsonAI!" description="GibsonAI is Serverless Postgres built for the cloud. Explore Postgres features and functions in our user-friendly SQL Editor. Sign up for a free account to get started." buttonText="Sign Up" buttonUrl="https://app.gibsonai.com/signup" />
 ```
 
 ## Steps

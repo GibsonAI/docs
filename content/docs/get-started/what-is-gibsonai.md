@@ -2,8 +2,6 @@
 title: What is GibsonAI?
 subtitle: Design, deploy, manage, and scale serverless SQL databases instantly so you can focus on shipping features.
 enableTableOfContents: true
-redirectFrom:
-  - /docs/introduction/about
 updatedOn: '2025-05-30T16:54:40.456Z'
 ---
 
