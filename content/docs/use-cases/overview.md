@@ -9,7 +9,7 @@ updatedOn: '2025-05-29T18:14:43.689Z'
 
 Convert a hand-drawn diagram, an image of a table, a messy Google Sheet, a SQL schema, or just a JSON file into a production-ready relational database instantly. It automatically generates the schema, creates relationships, sets up validation rules, and deploys a secure, scalable API for you. This is ideal for developers, analysts, or product teams who want to turn raw structure into a working backend without writing code.
 
-![Convert any data source to a database with GibsonAI](/docs/use-cases/convert-any-data-source-to-db.gif)
+![Convert any data source to a database with GibsonAI](/docs/use-cases/convert-any-data-source-to-db.gif)[Example of creating a database schema from an ER diagram image using GitHub Copilot in VS Code]
 
 ## Deploy databases using AI Agents
 
@@ -19,7 +19,7 @@ Use AI agent frameworks like [LangGraph](https://www.langchain.com/langgraph), [
 
 With GibsonAI, you can give natural language instructions to AI agents and have them design, deploy, and update your databases automatically. For example, just say "Create a project and add a user table with name, email, and password fields," and GibsonAI will handle everything—from schema creation to cloud deployment, ERD generation, and API publishing. It’s perfect for developers using [GitHub Copilot](https://github.com/features/copilot), [Claude](https://claude.ai/), [Cursor](https://www.cursor.com/), [Bolt](https://bolt.new/) or other prompt-based IDEs who want to manage their databases by talking to their tools.
 
-![Create a Database Schema and REST APIs with a Single Prompt Using GitHub Copilot in VS Code](/docs/use-cases/create-database-with-github-copilot.gif)
+![Create a Database Schema and REST APIs with a Single Prompt Using GitHub Copilot in VS Code](/docs/use-cases/create-database-with-github-copilot.gif)[Example of single prompt database creation using GibsonAI MCP server with GitHub Copilot in VS Code]
 
 ## Turn any database into apps
 
