@@ -195,7 +195,3 @@ You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and the
 To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
 
 Reload VS Code and auto-format will work for you.
-
-## Docs
-
-Documentation for docs is described in [content/docs/README.md](./content/docs/README.md)
