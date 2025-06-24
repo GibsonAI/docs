@@ -142,7 +142,7 @@ const defaultConfig = {
     return [
       {
         source: '/',
-        destination: '/', // Now root is docs landing
+        destination: '/introduction', // Now root is docs landing
         permanent: true,
       },
       {
