@@ -1,6 +1,7 @@
 ---
 title: GibsonAI Architecture
 subtitle: Understand infrastructure behind GibsonAI
+enableTableOfContents: true
 updatedOn: '2025-06-17T16:16:13.439Z'
 ---
 
