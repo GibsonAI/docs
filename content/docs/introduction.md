@@ -3,7 +3,7 @@ title: GibsonAI Docs
 updatedOn: '2025-06-16T22:31:52.611Z'
 ---
 
-**GibsonAI** is an AI-powered developer platform that lets you design, build, and deploy production-grade serverless databases in minutes — using just natural language prompts.
+**GibsonAI** is your AI-powered “database engineer” that lets you design, build, deploy, and scale production-ready serverless databases using natural-language prompts.
 
 ## Get started
 
