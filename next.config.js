@@ -142,12 +142,17 @@ const defaultConfig = {
     return [
       {
         source: '/',
-        destination: '/docs/introduction',
+        destination: '/', // Now root is docs landing
         permanent: true,
       },
       {
         source: '/docs',
-        destination: '/docs/introduction',
+        destination: '/', // Redirect /docs to root
+        permanent: true,
+      },
+      {
+        source: '/docs/:path*',
+        destination: '/:path*', // Redirect all /docs/* to /*
         permanent: true,
       },
       ...docsRedirects,
