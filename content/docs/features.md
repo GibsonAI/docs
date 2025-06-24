@@ -1,5 +1,5 @@
 ---
-title: GibsonAI features
+title: Features
 subtitle: Explore GibsonAI's features
 enableTableOfContents: true
 updatedOn: '2025-06-17T00:37:35.166Z'

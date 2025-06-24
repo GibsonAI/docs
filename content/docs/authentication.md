@@ -1,6 +1,6 @@
 ---
-title: Signup & Sign-In
-subtitle: GibsonAI Signup & Sign-In Guide
+title: Authentication
+subtitle: Signup & Sign-In Guide
 enableTableOfContents: true
 updatedOn: '2025-05-23T13:20:56.227Z'
 ---
