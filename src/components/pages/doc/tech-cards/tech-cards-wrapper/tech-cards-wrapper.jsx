@@ -21,7 +21,8 @@ const TechCardsWrapper = ({ children, withToggler }) => {
       {withToggler && (
         <button
           type="button"
-          className="mx-auto mt-4 flex items-center rounded-full bg-gray-new-98 px-[18px] py-1.5 text-black-new transition-colors duration-200 hover:bg-gray-new-94 dark:bg-gray-new-10 dark:text-gray-new-80 dark:hover:bg-gray-new-15"
+          className="mx-auto mt-4 flex items-center rounded-full px-[18px] py-1.5 text-black-new transition-colors duration-200 hover:bg-gray-new-94 dark:bg-gray-new-10 dark:text-gray-new-80 dark:hover:bg-gray-new-15"
+          style={{ backgroundColor: 'rgba(21, 34, 51, 0.70)' }}
           onClick={handleClick}
         >
           <span className="text-sm font-medium">{isOpen ? 'Hide' : 'Show more'}</span>
