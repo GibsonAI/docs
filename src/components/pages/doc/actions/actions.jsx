@@ -103,7 +103,7 @@ const Actions = ({ githubPath, withBorder = false }) => {
       )}
     >
       {/* <CopyMarkdownButton rawFileLink={rawFileLink} /> */}
-      {/* <ActionItem icon={GitHubIcon} text="Edit this page on Github" url={gitHubLink} /> */}
+      <ActionItem icon={GitHubIcon} text="Edit this page on Github" url={gitHubLink} />
       {/* <ActionItem icon={ChatGptIcon} text="Open in ChatGPT" url={chatGptLink} /> */}
     </div>
   );
