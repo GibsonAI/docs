@@ -150,9 +150,10 @@ const defaultConfig = {
         destination: '/', // Redirect /docs to root
         permanent: true,
       },
+      // Only redirect /docs/:path* if it does NOT end with a static file extension
       {
-        source: '/docs/:path*',
-        destination: '/:path*', // Redirect all /docs/* to /*
+        source: '/docs/:path((?!.*\\.(?:gif|png|jpg|jpeg|svg|webp|avif|ico|txt|xml|json)$).*)',
+        destination: '/:path',
         permanent: true,
       },
       ...docsRedirects,
