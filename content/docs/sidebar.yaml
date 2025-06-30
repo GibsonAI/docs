@@ -34,6 +34,7 @@
       items:
         - title: Signup & Sign-In
           slug: authentication
+          icon: template
     
     - title: Features
       slug: features
@@ -46,7 +47,7 @@
     - title: Use cases
       slug: use-cases/overview
       icon: use-case
-      
+
 - section: Dev tools
   items:
     - title: CLI Reference
