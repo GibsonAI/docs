@@ -21,6 +21,7 @@ import Cheque from './images/cheque.inline.svg';
 import CliCursor from './images/cli-cursor.inline.svg';
 import CLI from './images/cli.inline.svg';
 import Code from './images/code.inline.svg';
+import CrewAI from './images/crewai.inline.svg';
 import CSV from './images/csv.inline.svg';
 import Data from './images/data.inline.svg';
 import Database from './images/database.inline.svg';
@@ -97,6 +98,7 @@ const icons = {
   cli: CLI,
   'cli-cursor': CliCursor,
   code: Code,
+  'crew-ai': CrewAI,
   csv: CSV,
   data: Data,
   database: Database,
@@ -194,15 +196,11 @@ const DetailIconCards = ({ children = null, withNumbers = false }) => {
                 {withNumbers ? (
                   <span>{index + 1}.</span>
                 ) : (
-                  <div
-                    className={clsx(
-                      'h-full w-full',
-                      withNumbers &&
-                        'dark:rounded dark:bg-gradient-to-b dark:from-gray-new-15 dark:from-30% dark:to-[#1D1E20] dark:p-[5px]'
-                    )}
-                  >
-                    <Icon className="h-full w-full" />
-                  </div>
+                  Icon && (
+                    <div className={clsx('h-full w-full')}>
+                      <Icon className="h-full w-full" />
+                    </div>
+                  )
                 )}
               </div>
               <div className="relative z-10 flex flex-col gap-x-2.5">

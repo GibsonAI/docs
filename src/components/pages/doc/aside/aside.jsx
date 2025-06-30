@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 import Actions from 'components/pages/doc/actions';
-import ChatOptions from 'components/pages/doc/chat-options';
-import ChangelogForm from 'components/shared/changelog-form';
+import Author from 'components/pages/guides/post/author/author';
 import TableOfContents from 'components/shared/table-of-contents';
 
 const Aside = ({
@@ -13,6 +12,7 @@ const Aside = ({
   enableTableOfContents,
   tableOfContents,
   githubPath,
+  author = null,
 }) => (
   <div
     className={clsx(
@@ -33,6 +33,12 @@ const Aside = ({
       {enableTableOfContents && <TableOfContents items={tableOfContents} isTemplate={isTemplate} />}
       {/* {isDocsIndex && <ChatOptions isSidebar />} */}
       {/* {isChangelog && <ChangelogForm isSidebar />} */}
+      {/* Show author info if showAuthor is true and author data is provided */}
+      {author && (
+        <div className="mt-6">
+          <Author data={author} />
+        </div>
+      )}
       {!isChangelog && !isTemplate && (
         <Actions githubPath={githubPath} withBorder={enableTableOfContents} />
       )}
@@ -47,5 +53,6 @@ Aside.propTypes = {
   enableTableOfContents: PropTypes.bool,
   tableOfContents: PropTypes.array,
   githubPath: PropTypes.string,
+  author: PropTypes.object,
 };
 export default Aside;

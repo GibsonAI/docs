@@ -49,12 +49,16 @@ import UpgradeIcon from 'icons/docs/sidebar/upgrade.inline.svg';
 import UseCaseIcon from 'icons/docs/sidebar/use-case.inline.svg';
 import VersionIcon from 'icons/docs/sidebar/version.inline.svg';
 import WorkflowsIcon from 'icons/docs/sidebar/workflows.inline.svg';
+import AiAgentFrameworks from 'icons/header/ai.inline.svg';
+import Access from 'icons/security/access.svg';
 
 const icons = {
   'ai-agent': AiAgentIcon,
+  'ai-agent-frameworks': AiAgentFrameworks,
   'partner-guide': PartnerGuideIcon,
   'use-case': UseCaseIcon,
   ai: AiIcon,
+  access: Access,
   anonymize: AnonymizeIcon,
   api: ApiIcon,
   architecture: ArchitectureIcon,
