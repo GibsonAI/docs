@@ -27,11 +27,3 @@ AI-enhanced database management capabilities within your preferred development e
 <a href="/ai/connect-mcp-clients-to-gibsonai#windsurf-setup" description="AI-enhanced database management in Windsurf Editor" icon="openai">Windsurf</a>
 <a href="/ai/connect-mcp-clients-to-gibsonai#cline-vs-code-extension-setup" description="AI-enhanced database management with Cline" icon="openai">Cline</a>
 </DetailIconCards>
-
-## Use with Agent frameworks
-
-Build AI agents using popular frameworks that integrate with GibsonAI.
-
-<DetailIconCards>
-<a href="https://www.gibsonai.com/resources/building-a-sales-contact-aggregator-with-gibsonai-and-crew-ai" description="Building a Sales Contact Aggregator with GibsonAI and Crew AI" icon="openai">CrewAI</a>
-</DetailIconCards>

@@ -18,10 +18,6 @@
 
 - section: Platform
   items:
-    - title: Use cases
-      slug: use-cases/overview
-      icon: use-case
-
     - title: Architecture
       icon: architecture
       items:
@@ -33,6 +29,12 @@
           slug: introduction/conversation-state
           icon: chat
 
+    - title: Authentication & Access
+      icon: auth
+      items:
+        - title: Signup & Sign-In
+          slug: authentication
+    
     - title: Features
       slug: features
       icon: features
@@ -41,6 +43,10 @@
       slug: introduction/about-pricing
       icon: billing
 
+    - title: Use cases
+      slug: use-cases/overview
+      icon: use-case
+      
 - section: Dev tools
   items:
     - title: CLI Reference
@@ -69,6 +75,18 @@
           slug: ai/connect-mcp-clients-to-gibsonai
           icon: connect
 
+- section: Integrations
+  items:
+    - title: AI Agent Frameworks
+      slug: integrations/ai-agent-frameworks/overview
+      icon: ai-agent-frameworks
+
+- section: Resources
+  items:
+    - title: Guides
+      slug: guides/overview
+      icon: tutorial
+
     - title: Example repos
       slug: https://github.com/GibsonAI/awesome-gibson
       icon: book
@@ -76,9 +94,3 @@
     - title: Next.js App Template
       slug: https://github.com/GibsonAI/next-app
       icon: template
-
-- section: Authentication & Access
-  items:
-    - title: Signup & Sign-In
-      slug: authentication
-      icon: auth

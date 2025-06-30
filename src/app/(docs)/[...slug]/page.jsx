@@ -1,4 +1,8 @@
 /* eslint-disable react/prop-types */
+
+import fs from 'fs';
+import path from 'path';
+
 import { notFound } from 'next/navigation';
 
 import Post from 'components/pages/doc/post';
@@ -108,6 +112,21 @@ const DocPost = async ({ params }) => {
   const { data, content } = post;
   const tableOfContents = getTableOfContents(content);
 
+  // Author info logic
+  let authorData = null;
+  let showAuthor = false;
+  if (data.author) {
+    try {
+      const authorsJsonPath = path.join(process.cwd(), 'content', 'docs', 'guides', 'authors', 'data.json');
+      const authorsJson = JSON.parse(fs.readFileSync(authorsJsonPath, 'utf-8'));
+      authorData = authorsJson[data.author] || null;
+      showAuthor = !!authorData;
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.warn('Could not load author data:', e);
+    }
+  }
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -133,6 +152,8 @@ const DocPost = async ({ params }) => {
         githubPath={githubPath}
         tableOfContents={tableOfContents}
         isDocsIndex={isDocsIndex}
+        showAuthor={showAuthor}
+        author={authorData}
       />
     </>
   );

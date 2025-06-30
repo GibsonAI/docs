@@ -5,7 +5,6 @@ import ChangelogList from 'components/pages/changelog/changelog-list';
 import Hero from 'components/pages/changelog/hero';
 import Aside from 'components/pages/doc/aside';
 import Breadcrumbs from 'components/pages/doc/breadcrumbs';
-import Modal from 'components/pages/doc/modal';
 import MODALS from 'components/pages/doc/modal/data';
 import ChangelogForm from 'components/shared/changelog-form';
 import Content from 'components/shared/content';
@@ -41,6 +40,7 @@ const Post = ({
   currentSlug,
   githubPath,
   tableOfContents,
+  author = null,
 }) => {
   const modal = MODALS.find(
     (modal) =>
@@ -116,6 +116,7 @@ const Post = ({
         enableTableOfContents={enableTableOfContents}
         tableOfContents={tableOfContents}
         githubPath={githubPath}
+        author={author}
       />
       {/* {modal && <Modal {...modal} />} */}
     </>
@@ -150,6 +151,16 @@ Post.propTypes = {
   currentSlug: PropTypes.string.isRequired,
   githubPath: PropTypes.string.isRequired,
   tableOfContents: PropTypes.arrayOf(PropTypes.shape({})),
+    author: PropTypes.shape({
+    name: PropTypes.string,
+    position: PropTypes.string,
+    bio: PropTypes.string,
+    photo: PropTypes.string,
+    link: PropTypes.shape({
+      url: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  }),
 };
 
 export default Post;

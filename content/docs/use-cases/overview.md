@@ -9,7 +9,11 @@ updatedOn: '2025-05-29T18:14:43.689Z'
 
 Convert a hand-drawn diagram, an image of a table, a messy Google Sheet, a SQL schema, or just a JSON file into a production-ready relational database instantly. It automatically generates the schema, creates relationships, sets up validation rules, and deploys a secure, scalable API for you. This is ideal for developers, analysts, or product teams who want to turn raw structure into a working backend without writing code.
 
-![Convert any data source to a database with GibsonAI](/docs/use-cases/convert-any-data-source-to-db.gif)[Example of creating a database schema from an ER diagram image using GitHub Copilot in VS Code]
+<DetailIconCards>
+
+<a href="/guides/create-database-from-any-er-diagram-image" description="From PNG to Production: Build, Deploy and Modify a Schema with GibsonAI and GitHub Copilot" icon="respond-arrow">Turn an ER Diagram into a Live Database Using Prompts</a>
+
+</DetailIconCards>
 
 ## Deploy databases using AI Agents
 
