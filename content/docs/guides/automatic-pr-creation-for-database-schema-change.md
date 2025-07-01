@@ -31,21 +31,20 @@ The solution uses [GibsonAI MCP Server](https://docs.gibsonai.com/ai/mcp-server)
 Here’s what happens step by step:
 
 1. **Describe your schema change**
-    
+
     *Example: "Add an `address` column to the `user` table as a string"*
-    
+
 2. **GibsonAI applies the schema change**
-    
+
     It updates the database schema using the correct SQL syntax.
-    
+
 3. **GitHub Copilot generates the Python model**
-    
+
     Copilot clones the repository, opens a new branch and commits changed files behind the scenes. This includes Pydantic or SQLAlchemy files based on your stack, and respond from GibsonAI schema update to keep your code in sync with database changes.
-    
+
 4. **GitHub Copilot opens a GitHub Pull Request**
-    
+
     You get a PR with the updated model, schema changes, and docs.
-    
 
 Let's see an example of how you can make database schema changes and automatically generate corresponding Python model classes with a GitHub PR.
 
@@ -94,9 +93,9 @@ This setup launches the server locally and connects it with Copilot Chat. If you
 Now, inside Copilot Chat, just say:
 
 > “Add an address column to the user table as a string”
-> 
+>
 
-![Databse schema change prompt using GitHub copilot in VS Code](/docs/guides/automatic-pr-creation-for-database-schema-change/database_schema_change_prompt.png)
+![Database schema change prompt using GitHub copilot in VS Code](/docs/guides/automatic-pr-creation-for-database-schema-change/database_schema_change_prompt.png)
 
 Behind the scenes, this does four things:
 
@@ -121,6 +120,6 @@ Compared to other AI coding assistants, this workflow goes much further:
 
 ## Final Thoughts
 
-This approach doesn’t just speed up development — it reduces errors, saves time switching between tools, and brings schema evolution closer to how we already think and communicate as developers. Next time you want to update your database, try typing a prompt and feel free to leave your comments on [Discord](https://www.gibsonai.com/discord) if you find this AI-assistant workflow useful. 
+This approach doesn’t just speed up development — it reduces errors, saves time switching between tools, and brings schema evolution closer to how we already think and communicate as developers. Next time you want to update your database, try typing a prompt and feel free to leave your comments on [Discord](https://www.gibsonai.com/discord) if you find this AI-assistant workflow useful.
 
 Let us know if you would be interested in having this feature in the GibsonAI App.
