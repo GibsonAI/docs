@@ -68,7 +68,7 @@ What You Need
 
 ### Step 3: Set Up GibsonAI CLI and Log In
 
-Before using the GibsonAI [MCP server](https://github.com/GibsonAI/mcp), install [GibsonAI’s CLI](https://docs.gibsonai.com/#cli) and log in:
+Before using the GibsonAI [MCP server](https://github.com/GibsonAI/mcp), install [GibsonAI’s CLI](https://docs.gibsonai.com/reference/cli-quickstart) and log in:
 
 ```bash
 uvx --from gibson-cli@latest gibson auth login
